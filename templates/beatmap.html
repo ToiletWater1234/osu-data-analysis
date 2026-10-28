@@ -1,0 +1,12 @@
+<section id="beatmap-panel" class="workspace active">
+        <div class="workspace-heading">
+          <div><h2>谱面查询</h2></div>
+          <p>检索官方谱面或本地 Songs，Loved / 坟图使用本地文件分析。</p>
+        </div>
+        <form id="beatmap-form" class="control-card lookup-form">
+          <label>歌名、谱面 ID 或 osu! 链接<input id="beatmap-query" placeholder="输入歌名、ID 或链接" /></label>
+          <label>来源<select id="beatmap-source"><option value="official">官网（全部状态）</option><option value="local">本地谱面（含坟图）</option></select></label>
+          <button class="primary-button" type="submit">查询谱面</button>
+        </form>
+        <div id="beatmap-results" class="beatmap-results"></div>
+      </section>

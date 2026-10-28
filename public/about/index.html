@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="基于 osu! BP 的玩家画像、能力分析与玩家对比工具。" />
+    <title>网站说明 · osu!数据分析</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/homepage.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <main class="shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="osu!数据分析 首页">
+          <span class="brand-mark">o!</span>
+          <span><b>osu!数据分析</b><small>OSU! DATA ANALYSIS</small></span>
+        </a>
+        <nav class="main-nav" aria-label="主要功能"><a class="nav-button" href="/">首页</a>
+<a class="nav-button" href="/bp/">BP 分析</a>
+<a class="nav-button" href="/compare/">玩家对比</a>
+<a class="nav-button" href="/beatmaps/">谱面查询</a></nav>
+        <div id="auth-area" class="auth-area">
+          <a class="login-button" href="/api/auth/login?returnTo=%2Fabout%2F">使用 osu! 登录</a>
+        </div>
+      </header>
+
+
+<section id="notice" class="notice" hidden></section>
+
+<article class="about-page" aria-labelledby="about-title">
+  <header class="about-heading"><p class="eyebrow">ABOUT THIS SITE</p><h1 id="about-title">网站说明</h1><p>了解如何使用 osu!数据分析，以及分析结果从何而来。</p><p class="about-updated">说明更新：2026-10-26</p></header>
+  <nav class="about-toc" aria-label="说明目录"><a href="#usage">使用方法</a><a href="#algorithms">分析范围</a><a href="#credits">使用的仓库</a><a href="#admin-guide">首页管理</a><a href="#data-guide">数据与缓存</a><a href="#updates">更新记录</a></nav>
+  <section id="usage"><h2>使用方法</h2>
+    <p>点击右上角“使用 osu! 登录”，在 osu! 官网完成授权。浏览器已有 osu! 登录状态时可沿用该状态；首次使用仍需确认授权。本站不会要求输入 osu! 密码。</p>
+    <dl><dt><a href="/bp/">BP 分析</a></dt><dd>输入玩家名或数字 ID，选择游戏模式；mania 可选择 4K、7K 或全部键数。未登录时示例为 MyAngelHyacine / 35851725，登录后使用自己的信息。系统读取公开 BP 与置顶成绩，生成玩家画像。mania 的完整谱面分析需要等待下载和计算完成。</dd>
+    <dt><a href="/compare/">玩家对比</a></dt><dd>输入两位玩家的数字 ID，在同一游戏模式及键数范围下并列查看表现。此页面比较各自的成绩样本，并非相同谱面的逐图对战。</dd>
+    <dt><a href="/beatmaps/">谱面查询</a></dt><dd>输入歌名、单张谱面的数字 ID，或包含难度 ID 的官网链接，例如 osu.ppy.sh/beatmaps/123。谱包链接请带上具体难度的锚点；搜索结果可跳转 osu! 官网。官网检索包含 Loved、坟图等状态；切换“本地谱面”可查询已绑定的 Songs，无需登录。本地检索只展示文件信息，不计算难度。</dd></dl>
+    <p>首页轮播下方的“图PP列表”提供各模式参考表，目前开放 <a href="https://docs.qq.com/sheet/DV0tHRUdvdHZpVEtZ" target="_blank" rel="noopener noreferrer">mania 4K 图 PP 表格</a>，点击后在新标签页打开腾讯文档。</p>
+    <p>三个工具拥有独立页面，可直接收藏链接。本站提供网页分析与成绩展示，没有表格格式生成或复制导出功能。</p>
+  </section>
+  <section id="algorithms"><h2>分析范围与结果含义</h2>
+    <p>无论是否绑定本地目录，基础画像始终使用 B50。目录已绑定且可读取时，mania 额外从有实际成绩的 Loved / 坟图中，选取成绩 PP 最高的最多 50 张谱面参与键型与 RC / LN 能力分析。额外样本不足 50 张时按实际数量处理；与 B50 重复的谱面不重复计入。</p>
+    <p>扩展成绩来源包括官方最近通过成绩、置顶成绩，以及本地 osu!stable 的 scores.db。先按被分析玩家的数字用户 ID，从 osu! 官方 API 取得该用户的现用名及曾用名名单。本地成绩中的玩家名必须与其中一个名字相同（不区分大小写，不使用模糊匹配）；若成绩另带数字用户 ID，也必须一致。玩家对比时，两位玩家各自匹配各自的名单，不使用当前登录者的名字代替目标玩家。</p>
+    <p>scores.db 通常只记录玩家名，不包含数字用户 ID，因此不能直接从该文件验证账号 ID；这里使用该 ID 对应的官方现用名／曾用名作为匹配依据，不把谱面 ID 或在线成绩 ID 当作用户 ID。随后还会核对键数、文件校验值及 Loved / Graveyard 状态。Pending / WIP、未提交、版本不符或无法确认的谱面不进入额外样本。没有匹配成绩的图不计算难度、不参与分析。</p>
+    <p>候选成绩先在本机用 rosu-pp-js 4.0.1，依据实际判定数、客户端和 Mod 复算官方 mania PP 公式，按复算 PP 降序选取额外 50 张；同一谱面的多条成绩只保留 PP 最高的一条。选取后才运行 Mixed + Pattern 能力分析，最多为 B50 加额外 50 张。不按星数、原始分数或假设满准度排序；缺少判定数的成绩不会模拟补齐。</p>
+    <p>坟图 / Loved 的复算 PP 是个人分析用参考值，不是官方授予的排名 PP，不会写入账号总 PP。基础指标仍是 B50 的统计。官方未提供的曾用名、未保存在本地的历史成绩、lazer 专用数据库以及官方最近列表之外的记录可能无法匹配。只有 Songs 而没有成绩库时，仅能补充已经找到官方实际成绩的本地谱面。</p>
+    <p>此前已绑定的目录需点击一次“重新扫描 / 授权”，以更新用于 PP 计算的判定字段；在重新扫描完成前，使用 B50。</p>
+    <p>mania 下载完整 .osu 文件后，在浏览器后台计算 Mixed 难度与 Pattern 键型特征，再结合成绩生成 RC / LN 倾向和各项能力。算法来源为下方列出的 LeoBlack 项目，网站只接入其中的部分模块。</p>
+    <ul><li>当前未接入 Companella 的 ONNX 推理；需要相关模型时使用已有回退路径，不能视为完整上游实现。</li><li>stable 的 LN 成绩使用原始准确率，尚未加入 ScoreV2 尾判修正，LN 结果存在偏差。</li><li>部分特殊 Mod（包括 RD、HO、IN 与键数转换）不参与结构能力分析。</li><li>其他主模式目前提供基础成绩统计，结构能力算法尚未接入。“暂无算法”代表尚无支持，不代表玩家能力为零。</li><li>能力值属于模型估计，样本数、键数、Mod 与成绩准确率都会影响结果，不等同于官方评级或段位认证。</li></ul>
+  </section>
+  <section id="credits"><h2>本网站使用的仓库与服务</h2>
+    <div class="about-repositories"><div><h3><a href="https://github.com/LeoBlackMT/osumania_map_analyser" target="_blank" rel="noopener noreferrer">LeoBlackMT / osumania_map_analyser ↗</a></h3><p>提供已接入的 mania 解析、Mixed 难度与 Pattern 键型模块，包括 Sunny、Daniel、Azusa、Roxy 等实现。当前使用 v2.0.0 对应的部分 JavaScript 模块，并非接入仓库的所有分析器。</p><p>MIT 许可证，Copyright © 2026 Leo_Black。<a href="/vendor/mania/LICENSE">查看保留的许可证</a>。</p></div>
+    <div><h3><a href="https://github.com/MaxOhn/rosu-pp-js" target="_blank" rel="noopener noreferrer">MaxOhn / rosu-pp-js ↗</a> · <a href="https://github.com/MaxOhn/rosu-pp" target="_blank" rel="noopener noreferrer">rosu-pp ↗</a></h3><p>接入 v4.0.1 的浏览器 WebAssembly 包，在本地复算 mania 成绩 PP，用于选择 Loved / 坟图额外样本。rosu-pp 是官方计算逻辑的社区移植，并非官方在线服务；当前 mania PP 公式已用测试核对。不替代本站原有的 Mixed + Pattern 能力模型。</p><p>MIT 许可。<a href="/vendor/rosu-pp/LICENSE">绑定库许可证</a> · <a href="/vendor/rosu-pp/ROSUPP-LICENSE">计算库许可证</a>。</p></div>
+    <div><h3><a href="https://github.com/cloudflare/workers-sdk" target="_blank" rel="noopener noreferrer">Cloudflare / workers-sdk ↗</a></h3><p>使用其中的 Wrangler 开发与部署工具发布网站，不参与玩家能力计算。工具采用 MIT OR Apache-2.0 许可。</p></div></div>
+    <p><a href="https://osu.ppy.sh/docs/index.html" target="_blank" rel="noopener noreferrer">osu! 官方 API</a> 提供账号授权、玩家与成绩数据；曲绘与谱面来自 osu!。网站由 Cloudflare Workers 与 KV 托管。本网站为个人项目，与 osu! 官方无隶属关系。</p>
+    <p>仅评估、尚未接入的仓库不列为已使用算法。作者联系方式与个人主页见页脚。</p>
+  </section>
+  <section id="admin-guide"><h2>首页管理</h2><p>管理员登录后可在首页打开“管理首页”，修改全局标题、图片标题、超链接、顺序和轮播间隔。支持 1–20 张图片，切换间隔为 3–15 秒。</p><p>导入 osu! 谱面或谱包链接可获取曲绘，并自动填入“作者 — 曲名”和官网超链接，之后仍可编辑。也可上传不超过 2 MB 的 JPG、PNG 或 WebP。超链接支持 HTTP(S)，留空时图片不可点击。</p><p>仅站长 MyAngelHyacine（osu! ID：35851725）可以授予或撤销其他管理员权限。其他管理员可管理首页内容。</p></section>
+  <section id="data-guide"><h2>本地目录与数据</h2><p>展开“本地 osu! 文件夹”，点击“浏览并绑定文件夹”。建议选择 osu!stable 安装目录，以便同时找到 Songs、osu!.db（谱面状态）和 scores.db（本地成绩）。在已授权目录中优先寻找 osu/Songs、osu!/Songs、Songs，也可直接选择 Songs。自定义子目录可手动填写；完整路径需粘贴到系统目录选择器地址栏，网站不能仅凭绝对路径读取磁盘。</p><p>目录索引与校验在浏览器后台进行，仅索引 .osu 及必要的本地数据库，不读取音频、视频或曲绘。每张 .osu 最大 2 MB；索引读取文件用于版本匹配，并不运行难度算法。只有存在匹配成绩时才执行难度计算。</p><p>本地 .osu 原文与成绩库不上传服务器。Chrome / Edge 可在浏览器本地保存目录句柄、索引和成绩数据，后续可能需要重新授权；不支持目录授权的浏览器使用文件夹选择，本次页面有效，跳转后可能需要重新选择。“重新扫描 / 授权”可刷新文件变化；“解除绑定”会清除本站保存的本地索引与成绩。</p><p>确认本地成绩的官方谱面状态时，仅向服务器发送谱面 ID。Loved / 坟图参与分析的前提是本地文件可读取且匹配到玩家成绩。坟图、Pending / WIP、未提交或未确认状态的 .osu 不在服务器下载或保存；其他已验证状态的官方谱面仍可使用原有持久缓存。</p><p>OAuth 凭据保存在服务器端，浏览器使用安全会话 Cookie；会话最长保留 30 天，可退出登录。BP 结果有 15 分钟缓存，刚更新的成绩可能不会立即显示。官方谱面持久缓存受托管配额限制，暂时无法保存不会阻止当前分析。</p></section>
+  <section id="updates"><h2>更新记录</h2><h3>2026-10-26 · 本地成绩身份匹配</h3><ul><li>按被分析用户 ID 获取官方现用名和曾用名，只纳入名字匹配的本地成绩。</li><li>若成绩带有数字用户 ID，必须同时一致；不同玩家的对比名单分别处理。</li><li>沿用 B50 + 额外 PP 前 50；不增加逐成绩 API 请求或 KV 写入。</li></ul><h3>2026-10-24 · B50 与额外 PP 前 50</h3><ul><li>基础分析统一为 B50；绑定后额外选取有实际成绩的 Loved / 坟图中，复算 PP 最高的最多 50 张。</li><li>接入 rosu-pp-js / rosu-pp 4.0.1，在本机按实际判定与 Mod 复算 PP；不按星数或假设满准度排序。</li><li>同图保留最高 PP 成绩，排除 B50 重复图；新增额外样本列表显示复算参考 PP。</li><li>判定字段格式更新，旧目录绑定需重新扫描一次。</li></ul><h3>2026-10-24 · 缓存额度优化</h3><ul><li>BP 与谱面状态等短期缓存移出持久 KV，减少逐图重复写入。</li><li>短期缓存读取或写入失败时，仍可返回已取得的分析数据；不影响原有登录与管理员权限校验。</li><li>清理坟图旧缓存时仅删除实际存在的条目，避免重复消耗删除额度。</li></ul><h3>2026-10-24 · 本地谱面与扩展样本</h3><ul><li>首页新增“图PP列表”，接入 mania 4K 腾讯文档。</li><li>新增本地目录绑定、自动寻找 Songs、手动子目录与系统目录浏览，以及本地谱面检索。</li><li>最初增加目录绑定与扩展成绩；目前范围已调整为 B50 + 额外 PP 前 50，见最新记录。没有成绩的图不分析。</li><li>本地 .osu 与成绩库不上传；服务器不再下载或保存坟图原文件。</li></ul><h3>2026-10-24 · 页面与首页管理</h3><ul><li>首页、BP 分析、玩家对比与谱面查询使用独立页面。</li><li>轮播支持管理员编辑标题、图片和链接，箭头位于图片两侧中央，移除精选编号与暂停按钮。</li><li>符合条件的官方 .osu 文件加入持久存储。</li><li>页脚加入作者 GitHub、B站、osu! 主页、邮箱和说明入口；新增本说明页。</li></ul><p>后续每次网站更新都会同步核对本页的使用方法、算法来源与限制，并补充更新记录。</p></section>
+</article>
+
+      <footer>
+        <div class="footer-credit"><b>osu!数据分析</b><span>非 osu! 官方项目 · 数据由 osu! API 提供</span></div>
+        <nav class="footer-links" aria-label="作者与网站说明">
+          <a href="https://github.com/ToiletWater1234" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://space.bilibili.com/496872941" target="_blank" rel="noopener noreferrer">B站 ↗</a>
+          <a href="https://osu.ppy.sh/users/35851725" target="_blank" rel="noopener noreferrer">osu! 主页 ↗</a>
+          <a href="mailto:864457207@qq.com">864457207@qq.com</a>
+          <a href="/about/">说明</a>
+        </nav>
+      </footer>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

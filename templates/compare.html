@@ -1,0 +1,14 @@
+<section id="compare-panel" class="workspace active">
+        <div class="workspace-heading">
+          <div><h2>玩家对比</h2></div>
+          <p>输入两个玩家 ID，以相同模式生成并排画像。</p>
+        </div>
+        <form id="compare-form" class="control-card compare-form">
+          <label>玩家 A ID<input id="compare-a" inputmode="numeric" placeholder="数字 ID" /></label>
+          <label>玩家 B ID<input id="compare-b" inputmode="numeric" placeholder="数字 ID" /></label>
+          <label>模式<select id="compare-mode"><option value="mania">osu!mania</option><option value="osu">osu!standard</option><option value="taiko">osu!taiko</option><option value="fruits">osu!catch</option></select></label>
+          <label id="compare-keys-field">键数<select id="compare-keys"><option value="4k">4K</option><option value="7k">7K</option><option value="all">全部</option></select></label>
+          <button class="primary-button" type="submit">开始对比</button>
+        </form>
+        <div id="compare-output" class="compare-output"></div>
+      </section>

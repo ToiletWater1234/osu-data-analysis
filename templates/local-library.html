@@ -1,0 +1,10 @@
+<details class="local-library" id="local-library-panel">
+  <summary>本地 osu! 文件夹 <span id="local-summary">未绑定 · 使用 B50</span></summary>
+  <p>始终分析 B50。绑定后，额外选取有实际成绩的 Loved / 坟图中，按官方 PP 公式复算后最高的最多 50 张。没有成绩的图不分析；本地谱面和成绩库不上传。</p>
+  <p>本地成绩只统计被分析用户 ID 对应的现用名或官方曾用名，不匹配其他玩家或相似名字。</p>
+  <div class="local-actions"><button id="local-bind" class="secondary-button" type="button">浏览并绑定文件夹</button><button id="local-rescan" class="secondary-button" type="button" hidden>重新扫描 / 授权</button><button id="local-disconnect" class="secondary-button" type="button" hidden>解除绑定</button></div>
+  <label class="local-path-label">手动指定子目录（可选）<input id="local-relative-path" placeholder="例如 osu/Songs；留空自动寻找" /></label>
+  <p class="local-hint">建议选择 osu! 安装目录，便于读取 Songs、osu!.db 和 scores.db。优先寻找 osu/Songs、osu!/Songs、Songs，也可直接选择 Songs。完整路径（如 D:\Games\osu!）请粘贴到系统目录选择器的地址栏。网站只能读取你授权的目录。</p>
+  <p id="local-status" role="status" aria-live="polite">未绑定：使用 B50。Chrome / Edge 可记住目录授权；其他浏览器可能需要每次重新选择。</p>
+  <input id="local-folder-input" type="file" webkitdirectory multiple hidden />
+</details>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="基于 osu! BP 的玩家画像、能力分析与玩家对比工具。" />
+    <title>BP 分析 · osu!数据分析</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/homepage.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <main class="shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="osu!数据分析 首页">
+          <span class="brand-mark">o!</span>
+          <span><b>osu!数据分析</b><small>OSU! DATA ANALYSIS</small></span>
+        </a>
+        <nav class="main-nav" aria-label="主要功能"><a class="nav-button" href="/">首页</a>
+<a class="nav-button active" href="/bp/" aria-current="page">BP 分析</a>
+<a class="nav-button" href="/compare/">玩家对比</a>
+<a class="nav-button" href="/beatmaps/">谱面查询</a></nav>
+        <div id="auth-area" class="auth-area">
+          <a class="login-button" href="/api/auth/login?returnTo=%2Fbp%2F">使用 osu! 登录</a>
+        </div>
+      </header>
+
+
+<section id="notice" class="notice" hidden></section>
+<details class="local-library" id="local-library-panel">
+  <summary>本地 osu! 文件夹 <span id="local-summary">未绑定 · 使用 B50</span></summary>
+  <p>始终分析 B50。绑定后，额外选取有实际成绩的 Loved / 坟图中，按官方 PP 公式复算后最高的最多 50 张。没有成绩的图不分析；本地谱面和成绩库不上传。</p>
+  <p>本地成绩只统计被分析用户 ID 对应的现用名或官方曾用名，不匹配其他玩家或相似名字。</p>
+  <div class="local-actions"><button id="local-bind" class="secondary-button" type="button">浏览并绑定文件夹</button><button id="local-rescan" class="secondary-button" type="button" hidden>重新扫描 / 授权</button><button id="local-disconnect" class="secondary-button" type="button" hidden>解除绑定</button></div>
+  <label class="local-path-label">手动指定子目录（可选）<input id="local-relative-path" placeholder="例如 osu/Songs；留空自动寻找" /></label>
+  <p class="local-hint">建议选择 osu! 安装目录，便于读取 Songs、osu!.db 和 scores.db。优先寻找 osu/Songs、osu!/Songs、Songs，也可直接选择 Songs。完整路径（如 D:\Games\osu!）请粘贴到系统目录选择器的地址栏。网站只能读取你授权的目录。</p>
+  <p id="local-status" role="status" aria-live="polite">未绑定：使用 B50。Chrome / Edge 可记住目录授权；其他浏览器可能需要每次重新选择。</p>
+  <input id="local-folder-input" type="file" webkitdirectory multiple hidden />
+</details>
+
+<section id="analysis-panel" class="workspace active">
+        <div class="workspace-heading">
+          <div><h2>玩家 BP 分析</h2></div>
+          <p>搜索并选择玩家，然后生成画像。</p>
+        </div>
+        <div class="control-card">
+          <form id="player-form" class="analysis-form">
+            <label>玩家名或用户 ID<input id="player-query" autocomplete="off" placeholder="例如 MyAngelHyacine 或 35851725" /></label>
+            <label>模式<select id="mode-select"><option value="mania">osu!mania</option><option value="osu">osu!standard</option><option value="taiko">osu!taiko</option><option value="fruits">osu!catch</option></select></label>
+            <label id="keys-field">键数<select id="keys-select"><option value="4k">4K</option><option value="7k">7K</option><option value="all">全部</option></select></label>
+            <button class="primary-button" type="submit">搜索玩家</button>
+          </form>
+          <div id="player-results" class="player-results"></div>
+        </div>
+        <div id="analysis-output"></div>
+      </section>
+      <footer>
+        <div class="footer-credit"><b>osu!数据分析</b><span>非 osu! 官方项目 · 数据由 osu! API 提供</span></div>
+        <nav class="footer-links" aria-label="作者与网站说明">
+          <a href="https://github.com/ToiletWater1234" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://space.bilibili.com/496872941" target="_blank" rel="noopener noreferrer">B站 ↗</a>
+          <a href="https://osu.ppy.sh/users/35851725" target="_blank" rel="noopener noreferrer">osu! 主页 ↗</a>
+          <a href="mailto:864457207@qq.com">864457207@qq.com</a>
+          <a href="/about/">说明</a>
+        </nav>
+      </footer>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

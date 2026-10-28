@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="基于 osu! BP 的玩家画像、能力分析与玩家对比工具。" />
+    <title>osu!数据分析</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/homepage.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <main class="shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="osu!数据分析 首页">
+          <span class="brand-mark">o!</span>
+          <span><b>osu!数据分析</b><small>OSU! DATA ANALYSIS</small></span>
+        </a>
+        <nav class="main-nav" aria-label="主要功能"><a class="nav-button active" href="/" aria-current="page">首页</a>
+<a class="nav-button" href="/bp/">BP 分析</a>
+<a class="nav-button" href="/compare/">玩家对比</a>
+<a class="nav-button" href="/beatmaps/">谱面查询</a></nav>
+        <div id="auth-area" class="auth-area">
+          <a class="login-button" href="/api/auth/login?returnTo=%2F">使用 osu! 登录</a>
+        </div>
+      </header>
+
+      <section class="home-carousel" aria-label="首页精选">
+        <div class="carousel-heading"><div><p class="eyebrow">OSU! DATA ANALYSIS</p><h1 id="hero-title">看清你的 BP，再决定下一张图。</h1></div><button id="edit-home" class="secondary-button" hidden>管理首页</button></div>
+        <div class="carousel-frame"><div id="carousel-stage" class="carousel-stage" aria-roledescription="轮播"><p class="carousel-loading">正在载入图片…</p></div><button id="carousel-prev" class="carousel-arrow carousel-arrow-prev" aria-label="上一张" hidden>‹</button><button id="carousel-next" class="carousel-arrow carousel-arrow-next" aria-label="下一张" hidden>›</button></div>
+        <div id="carousel-controls" class="carousel-controls" hidden><div id="carousel-dots" class="carousel-dots"></div></div>
+      </section>
+
+      <section class="pp-list" aria-labelledby="pp-list-title"><div class="workspace-heading"><div><h2 id="pp-list-title">图PP列表</h2></div><p>按模式查看谱面 PP 参考表。</p></div><a class="pp-list-card" href="https://docs.qq.com/sheet/DV0tHRUdvdHZpVEtZ" target="_blank" rel="noopener noreferrer"><span class="pp-mode">4K</span><div><h3>osu!mania 4K</h3><p>查看图 PP 表格 · 腾讯文档</p></div><span aria-hidden="true">↗</span></a></section>
+
+      <dialog id="home-editor" class="home-editor" aria-labelledby="editor-title">
+        <form id="home-form">
+          <header class="editor-header"><div><p class="eyebrow">ADMINISTRATION</p><h2 id="editor-title">管理首页轮播</h2></div><button id="close-editor" type="button" class="secondary-button">关闭</button></header>
+          <div class="editor-settings"><label>图片上方的首页标题<input id="home-title-input" maxlength="100" required /></label><label>切换间隔（秒）<input id="home-interval" type="number" min="3" max="15" step="1" required /></label></div>
+          <div class="editor-list-heading"><h3>轮播图片 <small id="slide-count"></small></h3><button id="add-slide" type="button" class="secondary-button">＋ 添加图片</button></div>
+          <p class="editor-hint">添加或移除图片以设置数量，最多 20 张。支持 osu! 谱面／谱包链接，或上传 JPG、PNG、WebP（每张最大 2 MB）。</p>
+          <div id="slide-editor-list"></div><p id="editor-status" role="status"></p>
+          <section id="admin-users-section" class="admin-users-section" hidden>
+            <h3>管理员设置</h3><p class="editor-hint">站长 MyAngelHyacine · 35851725。只有此账号可以添加或移除管理员；其他管理员只能编辑首页。</p>
+            <div class="source-input"><label>新的管理员（osu! 名字或 ID）<input id="new-admin-query" placeholder="输入要授权的玩家" /></label><button id="add-admin" type="button" class="secondary-button">添加管理员</button></div>
+            <div id="admin-user-list"></div><p id="admin-user-status" role="status"></p>
+          </section>
+          <footer class="editor-footer"><span>保存后对所有访客生效</span><button id="save-home" type="submit" class="primary-button">保存并应用</button></footer>
+        </form>
+      </dialog>
+
+
+<section id="notice" class="notice" hidden></section>
+<details class="local-library" id="local-library-panel">
+  <summary>本地 osu! 文件夹 <span id="local-summary">未绑定 · 使用 B50</span></summary>
+  <p>始终分析 B50。绑定后，额外选取有实际成绩的 Loved / 坟图中，按官方 PP 公式复算后最高的最多 50 张。没有成绩的图不分析；本地谱面和成绩库不上传。</p>
+  <p>本地成绩只统计被分析用户 ID 对应的现用名或官方曾用名，不匹配其他玩家或相似名字。</p>
+  <div class="local-actions"><button id="local-bind" class="secondary-button" type="button">浏览并绑定文件夹</button><button id="local-rescan" class="secondary-button" type="button" hidden>重新扫描 / 授权</button><button id="local-disconnect" class="secondary-button" type="button" hidden>解除绑定</button></div>
+  <label class="local-path-label">手动指定子目录（可选）<input id="local-relative-path" placeholder="例如 osu/Songs；留空自动寻找" /></label>
+  <p class="local-hint">建议选择 osu! 安装目录，便于读取 Songs、osu!.db 和 scores.db。优先寻找 osu/Songs、osu!/Songs、Songs，也可直接选择 Songs。完整路径（如 D:\Games\osu!）请粘贴到系统目录选择器的地址栏。网站只能读取你授权的目录。</p>
+  <p id="local-status" role="status" aria-live="polite">未绑定：使用 B50。Chrome / Edge 可记住目录授权；其他浏览器可能需要每次重新选择。</p>
+  <input id="local-folder-input" type="file" webkitdirectory multiple hidden />
+</details>
+
+<section class="home-tools" aria-label="数据分析工具">
+    <a class="home-tool-card" href="/bp/"><h2>BP 分析 <span>↗</span></h2><p>查看玩家画像、BP 成绩和键型能力。</p></a>
+    <a class="home-tool-card" href="/compare/"><h2>玩家对比 <span>↗</span></h2><p>在相同模式下对比两位玩家的表现。</p></a>
+    <a class="home-tool-card" href="/beatmaps/"><h2>谱面查询 <span>↗</span></h2><p>通过歌名、谱面 ID 或链接查找谱面。</p></a>
+  </section>
+      <footer>
+        <div class="footer-credit"><b>osu!数据分析</b><span>非 osu! 官方项目 · 数据由 osu! API 提供</span></div>
+        <nav class="footer-links" aria-label="作者与网站说明">
+          <a href="https://github.com/ToiletWater1234" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://space.bilibili.com/496872941" target="_blank" rel="noopener noreferrer">B站 ↗</a>
+          <a href="https://osu.ppy.sh/users/35851725" target="_blank" rel="noopener noreferrer">osu! 主页 ↗</a>
+          <a href="mailto:864457207@qq.com">864457207@qq.com</a>
+          <a href="/about/">说明</a>
+        </nav>
+      </footer>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

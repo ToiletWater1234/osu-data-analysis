@@ -1,0 +1,24 @@
+      <section class="home-carousel" aria-label="首页精选">
+        <div class="carousel-heading"><div><p class="eyebrow">OSU! DATA ANALYSIS</p><h1 id="hero-title">看清你的 BP，再决定下一张图。</h1></div><button id="edit-home" class="secondary-button" hidden>管理首页</button></div>
+        <div class="carousel-frame"><div id="carousel-stage" class="carousel-stage" aria-roledescription="轮播"><p class="carousel-loading">正在载入图片…</p></div><button id="carousel-prev" class="carousel-arrow carousel-arrow-prev" aria-label="上一张" hidden>‹</button><button id="carousel-next" class="carousel-arrow carousel-arrow-next" aria-label="下一张" hidden>›</button></div>
+        <div id="carousel-controls" class="carousel-controls" hidden><div id="carousel-dots" class="carousel-dots"></div></div>
+      </section>
+
+      <section class="pp-list" aria-labelledby="pp-list-title"><div class="workspace-heading"><div><h2 id="pp-list-title">图PP列表</h2></div><p>按模式查看谱面 PP 参考表。</p></div><a class="pp-list-card" href="https://docs.qq.com/sheet/DV0tHRUdvdHZpVEtZ" target="_blank" rel="noopener noreferrer"><span class="pp-mode">4K</span><div><h3>osu!mania 4K</h3><p>查看图 PP 表格 · 腾讯文档</p></div><span aria-hidden="true">↗</span></a></section>
+
+      <dialog id="home-editor" class="home-editor" aria-labelledby="editor-title">
+        <form id="home-form">
+          <header class="editor-header"><div><p class="eyebrow">ADMINISTRATION</p><h2 id="editor-title">管理首页轮播</h2></div><button id="close-editor" type="button" class="secondary-button">关闭</button></header>
+          <div class="editor-settings"><label>图片上方的首页标题<input id="home-title-input" maxlength="100" required /></label><label>切换间隔（秒）<input id="home-interval" type="number" min="3" max="15" step="1" required /></label></div>
+          <div class="editor-list-heading"><h3>轮播图片 <small id="slide-count"></small></h3><button id="add-slide" type="button" class="secondary-button">＋ 添加图片</button></div>
+          <p class="editor-hint">添加或移除图片以设置数量，最多 20 张。支持 osu! 谱面／谱包链接，或上传 JPG、PNG、WebP（每张最大 2 MB）。</p>
+          <div id="slide-editor-list"></div><p id="editor-status" role="status"></p>
+          <section id="admin-users-section" class="admin-users-section" hidden>
+            <h3>管理员设置</h3><p class="editor-hint">站长 MyAngelHyacine · 35851725。只有此账号可以添加或移除管理员；其他管理员只能编辑首页。</p>
+            <div class="source-input"><label>新的管理员（osu! 名字或 ID）<input id="new-admin-query" placeholder="输入要授权的玩家" /></label><button id="add-admin" type="button" class="secondary-button">添加管理员</button></div>
+            <div id="admin-user-list"></div><p id="admin-user-status" role="status"></p>
+          </section>
+          <footer class="editor-footer"><span>保存后对所有访客生效</span><button id="save-home" type="submit" class="primary-button">保存并应用</button></footer>
+        </form>
+      </dialog>
+

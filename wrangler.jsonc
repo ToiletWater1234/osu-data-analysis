@@ -1,0 +1,46 @@
+{
+  "name": "osu-data-analysis",
+  "account_id": "5d57f174c2d02db8f9e216208707c4bc",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-23",
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*"
+    ]
+  },
+  "vars": {
+    "ADMIN_OSU_ID": "35851725",
+    "OSU_REDIRECT_URI": "https://osu-data-analysis.cn/api/auth/callback"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "kv_namespaces": [
+    {
+      "binding": "SESSIONS",
+      "id": "b6d87ae8c7c445a2bbd22d87df9f888d"
+    },
+    {
+      "binding": "CACHE",
+      "id": "6d212a0bfc854fe9b8145811f367bec0"
+    },
+    {
+      "binding": "SITE_CONTENT",
+      "id": "1f52e568d5bc4fb6a8d9ff49c7c2fe87"
+    },
+    {
+      "binding": "OSU_FILES",
+      "id": "227ac9e8b9364df18c6d870c09797db1"
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "osu-data-analysis.cn",
+      "custom_domain": true
+    }
+  ]
+}

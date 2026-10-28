@@ -1,0 +1,70 @@
+.home-carousel { padding: 48px 0 32px; }
+.carousel-frame { position: relative; }
+.carousel-image-link { display: block; position: absolute; inset: 0; }
+.carousel-image-link:focus-visible { outline: 3px solid var(--cyan); outline-offset: -5px; border-radius: 22px; }
+.carousel-arrow { position: absolute; z-index: 3; top: 50%; transform: translateY(-50%); display: grid; place-items: center; width: 44px; height: 56px; border: 1px solid #ffffff40; border-radius: 12px; background: #080b1680; color: #fff; font-size: 34px; line-height: 1; cursor: pointer; backdrop-filter: blur(8px); }
+.carousel-arrow:hover { background: #080b16c0; }
+.carousel-arrow:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+.carousel-arrow-prev { left: 18px; }
+.carousel-arrow-next { right: 18px; }
+.admin-users-section { border-top: 1px solid var(--line); margin-top: 26px; padding-top: 12px; }
+.admin-user { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.admin-user small, #admin-user-status { color: var(--muted); font-size: 12px; }
+.carousel-heading { display: flex; justify-content: space-between; gap: 24px; align-items: center; margin: 0 0 24px; }
+.carousel-heading h1 { font-size: clamp(26px, 3vw, 42px); letter-spacing: -.035em; line-height: 1.3; margin: 8px 0 0; }
+.carousel-heading .eyebrow { margin: 0; }
+.secondary-button { border: 1px solid var(--line); background: var(--panel-strong); color: var(--text); padding: 10px 16px; border-radius: 11px; cursor: pointer; white-space: nowrap; }
+.carousel-stage { position: relative; aspect-ratio: 2.8; min-height: 280px; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: #171628; }
+.carousel-loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); }
+.carousel-slide { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity .65s ease; pointer-events: none; }
+.carousel-slide.active { opacity: 1; pointer-events: auto; }
+.carousel-slide::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4,6,15,.48), transparent 55%, rgba(4,6,15,.16)); pointer-events: none; }
+.carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
+.carousel-slide figcaption { position: absolute; z-index: 1; top: 0; left: 0; right: 0; padding: 28px 32px; text-shadow: 0 2px 12px #000; }
+.carousel-slide h2 { margin: 8px 0 0; max-width: 80%; font-size: clamp(18px, 2.2vw, 30px); line-height: 1.4; }
+.carousel-controls { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 18px; }
+.carousel-controls > button, .slide-row-heading button { border: 1px solid var(--line); color: var(--muted); background: var(--panel); padding: 6px 12px; border-radius: 9px; cursor: pointer; }
+.carousel-dots { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.carousel-dots button { cursor: pointer; width: 8px; height: 8px; border: 0; border-radius: 999px; background: #495066; padding: 0; transition: width .25s; }
+.carousel-dots button.active { width: 26px; background: var(--cyan); }
+.carousel-controls button:focus-visible, .secondary-button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; }
+.home-editor { width: min(900px, calc(100% - 28px)); max-height: 90vh; padding: 28px; border: 1px solid #3c4054; border-radius: 24px; color: var(--text); background: #10131e; }
+.home-editor::backdrop { background: #02040bbf; backdrop-filter: blur(6px); }
+.editor-header, .editor-list-heading, .slide-row-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.editor-header h2 { margin: 6px 0 0; font-size: 27px; }
+.editor-settings { display: grid; grid-template-columns: 1fr 150px; gap: 18px; margin: 28px 0; }
+.home-editor label { display: block; }
+.editor-hint { color: var(--muted); font-size: 13px; line-height: 1.7; }
+.editor-list-heading h3 { font-size: 18px; }
+#slide-count { color: var(--cyan); font-size: 12px; margin-left: 6px; }
+.slide-editor { display: grid; grid-template-columns: 160px 1fr; gap: 20px; border: 1px solid var(--line); padding: 18px; border-radius: 16px; margin: 16px 0; }
+.slide-preview { min-height: 130px; border-radius: 10px; overflow: hidden; background: #1a1e2d; display: grid; place-items: center; color: var(--muted); font-size: 12px; }
+.slide-preview img { width: 100%; height: 100%; max-height: 220px; object-fit: cover; }
+.slide-row-heading { margin-bottom: 16px; }
+.slide-row-heading strong { font-size: 14px; }
+.slide-row-heading button { margin-left: 5px; padding: 5px 9px; }
+.slide-fields > label, .source-input { margin-top: 12px; }
+.source-input { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: end; }
+.upload-label input { padding: 8px; font-size: 12px; }
+.editor-footer { border-top: 1px solid var(--line); padding: 20px 0 0; margin-top: 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.editor-footer span, #editor-status { font-size: 13px; color: var(--muted); }
+#editor-status { color: var(--cyan); line-height: 1.6; }
+button:disabled { cursor: not-allowed; opacity: .35; }
+@media (max-width: 700px) {
+  .carousel-arrow { width: 34px; height: 48px; font-size: 28px; }
+  .carousel-arrow-prev { left: 10px; }
+  .carousel-arrow-next { right: 10px; }
+  .home-carousel { padding-top: 30px; }
+  .carousel-heading { gap: 12px; align-items: start; }
+  .carousel-heading h1 { font-size: 25px; }
+  .carousel-stage { aspect-ratio: 1.55; min-height: 220px; border-radius: 18px; }
+  .carousel-slide figcaption { padding: 20px; }
+  .carousel-slide h2 { max-width: 100%; font-size: 19px; }
+  .carousel-controls { gap: 10px; }
+  .home-editor { padding: 18px; }
+  .editor-settings { grid-template-columns: 1fr; }
+  .slide-editor { grid-template-columns: 1fr; }
+  .slide-preview { height: 140px; }
+  .source-input { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { .carousel-slide { transition: none; } }

@@ -1,0 +1,16 @@
+<section id="analysis-panel" class="workspace active">
+        <div class="workspace-heading">
+          <div><h2>玩家 BP 分析</h2></div>
+          <p>搜索并选择玩家，然后生成画像。</p>
+        </div>
+        <div class="control-card">
+          <form id="player-form" class="analysis-form">
+            <label>玩家名或用户 ID<input id="player-query" autocomplete="off" placeholder="例如 MyAngelHyacine 或 35851725" /></label>
+            <label>模式<select id="mode-select"><option value="mania">osu!mania</option><option value="osu">osu!standard</option><option value="taiko">osu!taiko</option><option value="fruits">osu!catch</option></select></label>
+            <label id="keys-field">键数<select id="keys-select"><option value="4k">4K</option><option value="7k">7K</option><option value="all">全部</option></select></label>
+            <button class="primary-button" type="submit">搜索玩家</button>
+          </form>
+          <div id="player-results" class="player-results"></div>
+        </div>
+        <div id="analysis-output"></div>
+      </section>

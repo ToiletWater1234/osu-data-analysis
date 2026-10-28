@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/MaxOhn/rosu-pp-js",
+  "version": "4.0.1",
+  "rosuPpVersion": "4.0.1",
+  "archive": "https://github.com/MaxOhn/rosu-pp-js/releases/download/v4.0.1/rosu_pp_js_web.tar.gz",
+  "archiveSha256": "fae917e5e8a932d15d1bff49a8a26a14502b4d8d0b2b82a1b7cf0823fe825e74",
+  "license": "MIT"
+}
