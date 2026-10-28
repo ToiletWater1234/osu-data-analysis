@@ -1,6 +1,6 @@
 # osu! Analysis · 自有 Cloudflare 部署
 
-独立 Workers + Static Assets，使用自有域名，无需 Sites。功能沿用在线版：osu! OAuth、BP、mania Mixed + Pattern、玩家对比与谱面查询；没有表格格式生成与复制功能。
+独立 Workers + Static Assets，使用自有域名，无需 Sites。功能沿用在线版：osu! OAuth、BP、mania Mixed + Pattern、玩家对比与谱面查询。
 
 完整谱面的 Mixed + Pattern 计算放在浏览器专用 Web Worker 中，避免普通 Cloudflare 免费套餐的单次 CPU 时间限制。服务端保管 OAuth 密钥与会话、代理谱面下载。算法与在线版相同，原有 Companella 回退和特殊 Mod 限制继续保留。
 
