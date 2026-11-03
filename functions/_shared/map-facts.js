@@ -9,7 +9,7 @@ export async function rememberMapFacts(env,maps){
 export async function getMapFacts(env,session,ids,{contextKey}={}){
   // An analysis response contains official metadata for its full chart pool.
   // Reuse that one cache object on a cold isolate instead of 100 KV keys.
-  if(ids.some(id=>!factsMemory.has(Number(id)))&&/^bp:v6:\d+:(osu|mania|taiko|fruits):(all|4k|7k):(base|extras)$/.test(contextKey||'')){
+  if(ids.some(id=>!factsMemory.has(Number(id)))&&/^bp:v[67]:\d+:(osu|mania|taiko|fruits):(all|4k|7k):(base|extras)$/.test(contextKey||'')){
     const context=await readTransient(contextKey);
     if(context)await rememberMapFacts(env,[...(context.scores||[]),...(context.pinnedScores||[]),...(context.supplementalScores||[])].map(s=>s.beatmap));
   }

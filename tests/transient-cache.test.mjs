@@ -23,8 +23,10 @@ test('cold isolate can recover chart facts from one cached analysis without call
   const originalFetch=globalThis.fetch,originalCaches=globalThis.caches;const objects=new Map();
   globalThis.caches={default:{match:async key=>objects.get(key.url)?.clone(),put:async(key,value)=>objects.set(key.url,value.clone())}};
   globalThis.fetch=async()=>{throw Error('must not call upstream');};
-  try{await writeTransient('bp:v6:999:mania:all:extras',{scores:[{beatmap:{id:500000,status:'ranked',checksum:'new-hash'}}]},900);
-    const facts=await getMapFacts({}, {}, [500000],{contextKey:'bp:v6:999:mania:all:extras'});assert.equal(facts[0].checksum,'new-hash');
+  try{for(const [version,id] of [[6,500000],[7,500001]]){
+    const contextKey=`bp:v${version}:999:mania:all:extras`;
+    await writeTransient(contextKey,{scores:[{beatmap:{id,status:'ranked',checksum:'new-hash'}}]},900);
+    const facts=await getMapFacts({}, {}, [id],{contextKey});assert.equal(facts[0].checksum,'new-hash');}
   }finally{globalThis.fetch=originalFetch;globalThis.caches=originalCaches;}
 });
 test('cache read/write failures do not turn a valid player analysis into an error',async()=>{

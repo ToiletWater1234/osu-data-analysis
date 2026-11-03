@@ -89,11 +89,20 @@ Chrome / Edge 可通过只读目录授权，并在 IndexedDB 中记忆目录句�
 
 | 组件 | 当前用途 |
 | --- | --- |
-| LeoBlack Mixed + Pattern | 从完整 mania 谱面计算难度与键型特征，再结合实际成绩形成能力画像 |
+| Mixed 整图标尺 + Sunny 局部分段 + Pattern 占比评分（试用） | 按整图等级、局部相对难度、键型覆盖与实际 Acc 估分，默认选项 |
+| LeoBlack Mixed + Pattern（旧版） | 保留原有整图能力模型，可在页面切换并重新分析以对照 |
 | rosu-pp-js / rosu-pp 4.0.1 | 通过浏览器 WebAssembly 复算 mania 成绩 PP，筛选额外 Loved / 坟图样本 |
 | osu! 官方 API | 获取玩家资料、曾用名、BP、公开成绩及谱面信息 |
 
 rosu-pp 是官方计算逻辑的社区移植，并非官方在线服务。已通过测试核对当前接入的 mania PP 公式、判定字段与部分 Mod 行为；项目固定了依赖版本，不能保证永远与后续官方更新同步。
+
+BP 分析和玩家对比可选择“局部分段＋占比评分（试用）”或“旧版 Mixed + Pattern”。v2 以整图等级为标尺，结合各键型局部相对难度、独立覆盖率与整图 Acc 估分；取消 v1 的 80% 覆盖和准确率最坏下界硬门槛。高占比保留更多难度，低占比降档降权，不把少量高难段直接当作玩家能力。没有回放，真实局部 Acc 仍未知，页面明确标为“估计”。分段明细展示单图标尺、各键型贡献和局部谱面难度；不同键数分别估计。
+
+键型采用站长指定用语：常规、面条、单乱、协调、放手、盾、反键、四押切、对拍、纵叠、大叠、对切、锁手等。原始黄彩保留并分别展示 stable / lazer；画像判断中 lazer 黄彩按 50% 权重、单图贡献封顶 1:1，不直接影响键型等级和官方 PP。
+
+常规段位与面条段位在玩家资料下方以独立主卡片展示，位于基础统计之前，不放在详细情况中。BP 分析、玩家对比及旧版算法使用相同布局；全部键数按键数分组，细分键型保留在能力详情中。
+
+旧算法存档及校验值见 [archives/README.md](archives/README.md)。试用规则、局限、回归反例和 mania-tracker MSD 参考结论见 [docs/algorithm-experiment.md](docs/algorithm-experiment.md)。MSD / Prism 数值尚未接入，不与 Sunny 段位混算。
 
 目前仍有以下限制：
 
@@ -103,11 +112,16 @@ rosu-pp 是官方计算逻辑的社区移植，并非官方在线服务。已通
 - 其他主模式尚未接入逐谱面结构能力算法；“暂无算法”不代表能力为零。
 - 暂不支持 lazer 专用本地数据库；官方未返回的曾用名、未保留的本地成绩和官方最近列表之外的历史记录可能无法匹配。
 - 本地谱面版本与成绩不一致、状态不明确、判定缺失或未完成的样本可能被排除。
+- 分段试用目前支持 4K / 6K / 7K，最多 30000 音符、15 分钟，最终最多 10 段；不支持 EZ / HR / DA 等改变 OD 的 Mod。低覆盖、短段和口径未完全匹配时降权；评分参数尚需真实成绩校准，不代表严格能力下限。
 - 玩家对比展示双方各自的成绩样本，并非同一组谱面的逐图对战。
+
+每图最终最多 10 段，通过相邻合并后重算，不因自适应分段过多而丢弃整图。PP 模块使用本地 WebAssembly，浏览器 CSP 显式允许 `wasm-unsafe-eval`；失败时区分初始化、状态、文件匹配与成绩判定原因。
+
+主段位图标：4K 常规与 7K 常规 / 面条使用 Mania Tracker 的固定版本图片；4K 面条使用站长提供曲绘提取的 LN1–LN15 标志。图片不改变评分。来源及许可见 [段位素材](public/vendor/mania-tracker-dans/SOURCE.json)、[MIT 许可证](public/vendor/mania-tracker-dans/LICENSE) 和 [4K 面条素材记录](public/images/ln-dans/SOURCE.json)。
 
 ## 技术结构
 
-前端使用原生 HTML、CSS 与 JavaScript ES Modules。谱面索引、Mixed + Pattern 和 PP 计算在浏览器 Web Worker 中运行；后端使用 Cloudflare Workers + Static Assets，负责 OAuth、会话、官方 API 访问和受支持谱面的下载。
+前端使用原生 HTML、CSS 与 JavaScript ES Modules。谱面索引、局部分段、Mixed + Pattern 和 PP 计算在浏览器 Web Worker 中运行；后端使用 Cloudflare Workers + Static Assets，负责 OAuth、会话、官方 API 访问和受支持谱面的下载。
 
 ```text
 .
@@ -258,11 +272,13 @@ npm run build
 | 上游项目 | 本项目使用的部分 |
 | --- | --- |
 | [LeoBlackMT/osumania_map_analyser](https://github.com/LeoBlackMT/osumania_map_analyser) | mania 解析、Mixed 难度与 Pattern 键型等部分模块 |
+| [M1ra1Fx/ManiaLiveDan](https://github.com/M1ra1Fx/ManiaLiveDan) | 提交 9ff65f4 的 Sunny RC / LN、分段、时间切片及疑似 Vibro 检测，配合本站适配层 |
+| [aleju03/mania-hub](https://github.com/aleju03/mania-hub) | 仅复用 4K 常规及 7K 常规 / 面条段位图片，未接入其数值评分 |
 | [MaxOhn/rosu-pp-js](https://github.com/MaxOhn/rosu-pp-js) | v4.0.1 浏览器 WebAssembly 绑定 |
 | [MaxOhn/rosu-pp](https://github.com/MaxOhn/rosu-pp) | PP 与难度计算实现，经上述 WASM 包使用 |
 | [cloudflare/workers-sdk](https://github.com/cloudflare/workers-sdk) | Wrangler 开发与部署工具 |
 
-第三方算法的许可证保留在 [mania/LICENSE](public/vendor/mania/LICENSE)、[rosu-pp/LICENSE](public/vendor/rosu-pp/LICENSE) 与 [rosu-pp/ROSUPP-LICENSE](public/vendor/rosu-pp/ROSUPP-LICENSE)。rosu-pp 发布包版本、来源与校验值见 [SOURCE.json](public/vendor/rosu-pp/SOURCE.json)。使用或分发相关代码时，请保留对应署名与许可。
+第三方算法的许可证保留在 [mania/LICENSE](public/vendor/mania/LICENSE)、[ManiaLiveDan/LICENSE](public/vendor/manialivedan/LICENSE)、[ManiaLiveDan/NOTICE.md](public/vendor/manialivedan/NOTICE.md)、[rosu-pp/LICENSE](public/vendor/rosu-pp/LICENSE) 与 [rosu-pp/ROSUPP-LICENSE](public/vendor/rosu-pp/ROSUPP-LICENSE)。固定文件来源与校验值见 [ManiaLiveDan SOURCE.json](public/vendor/manialivedan/SOURCE.json) 和 [rosu-pp SOURCE.json](public/vendor/rosu-pp/SOURCE.json)。使用或分发相关代码时，请保留对应署名与许可。
 
 玩家、成绩、谱面元数据及曲绘来源于 osu!，相关接口说明见 [osu! API 文档](https://osu.ppy.sh/docs/index.html)。
 

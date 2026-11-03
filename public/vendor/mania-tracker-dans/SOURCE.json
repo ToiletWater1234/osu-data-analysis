@@ -1,0 +1,1510 @@
+{
+  "repository": "https://github.com/aleju03/mania-hub",
+  "commit": "b2b3009cf086e1b5d54777e606a7b8cedfbfca67",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 aleju03",
+  "scope": "4K regular; 7K regular and LN. No 4K LN or 6K images.",
+  "lookupReference": "src/lib/dan-images.ts",
+  "files": [
+    {
+      "path": "7k/0-high.svg",
+      "sourcePath": "public/images/dans/7k/0-high.svg",
+      "sha256": "df853137367f63e40b8d8f93b56341e0496da75ba56ebda47fee7cec1cf0adfb",
+      "size": 2257
+    },
+    {
+      "path": "7k/0-low.svg",
+      "sourcePath": "public/images/dans/7k/0-low.svg",
+      "sha256": "46a23a40251b2d0e500bf1dad2c5e40ce129c9e16e37a96b8efb94f77e560e9e",
+      "size": 2211
+    },
+    {
+      "path": "7k/0-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/0-mid-high.svg",
+      "sha256": "a10070117ad4c234f987981565a9dca3f79e52c5ece9c4d527c5a3a410dfd37b",
+      "size": 2105
+    },
+    {
+      "path": "7k/0-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/0-mid-low.svg",
+      "sha256": "760cafcf03f8d92dd0a0fbd2e1820a1c9d1636b86a4d685075ec16fc3587ea74",
+      "size": 2082
+    },
+    {
+      "path": "7k/0.svg",
+      "sourcePath": "public/images/dans/7k/0.svg",
+      "sha256": "2442c7c5b0826ee012ac468acab11f4730bf4856518ea561fef1665340da1d44",
+      "size": 1734
+    },
+    {
+      "path": "7k/1-high.svg",
+      "sourcePath": "public/images/dans/7k/1-high.svg",
+      "sha256": "4575a3145b5cd907396546f5b2ab4545e18145699c4fb97c006dec755cae8891",
+      "size": 2187
+    },
+    {
+      "path": "7k/1-low.svg",
+      "sourcePath": "public/images/dans/7k/1-low.svg",
+      "sha256": "96e68b411516b5c075b6429f051075819ffb59b353561c6b411b5871d16848f4",
+      "size": 2141
+    },
+    {
+      "path": "7k/1-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/1-mid-high.svg",
+      "sha256": "d2b944de8c25955e548420acc0eebd2484e0e110c66ce5d092cd3b27d77bfd70",
+      "size": 2035
+    },
+    {
+      "path": "7k/1-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/1-mid-low.svg",
+      "sha256": "e3e6b6d2c9d42ae9031685721b33ed4dad7d953ab53dcbedb2f4f75ba9fccb80",
+      "size": 2012
+    },
+    {
+      "path": "7k/1.svg",
+      "sourcePath": "public/images/dans/7k/1.svg",
+      "sha256": "9f9719a4c181d21a6b7a296167e902447243d421e0c83da4777ee354159c059b",
+      "size": 1664
+    },
+    {
+      "path": "7k/10-high.svg",
+      "sourcePath": "public/images/dans/7k/10-high.svg",
+      "sha256": "af9af8b2ed25e9c5c5c56fb6538a35ae094e6e3d92abbeaa24f228c5a5e9c0e4",
+      "size": 2466
+    },
+    {
+      "path": "7k/10-low.svg",
+      "sourcePath": "public/images/dans/7k/10-low.svg",
+      "sha256": "8c370d53dd30d84ce5572361d55d4d8cff5ace23c17e7c8570ef6e9091823c37",
+      "size": 2420
+    },
+    {
+      "path": "7k/10-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/10-mid-high.svg",
+      "sha256": "30ab240d50660fdcd4ac45e1b54d87d26aca305f34d71b6c48d3e55e169ac872",
+      "size": 2314
+    },
+    {
+      "path": "7k/10-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/10-mid-low.svg",
+      "sha256": "4ef0d177f7108dff2b65321119af83e959aaec0b8caf6acaa4e87547cce1c6c3",
+      "size": 2291
+    },
+    {
+      "path": "7k/10.svg",
+      "sourcePath": "public/images/dans/7k/10.svg",
+      "sha256": "f50c4f99a590d9487662d5b2bfaad6499602fcae727b415f05789742bce84283",
+      "size": 1943
+    },
+    {
+      "path": "7k/2-high.svg",
+      "sourcePath": "public/images/dans/7k/2-high.svg",
+      "sha256": "6ba6270408cd513e659a885afb2cbd9c3a3a70c528f2188ec7f0784fc5ae2a2c",
+      "size": 2252
+    },
+    {
+      "path": "7k/2-low.svg",
+      "sourcePath": "public/images/dans/7k/2-low.svg",
+      "sha256": "aa3ac46c24b20314107db5974012ef88c14896bdcbdebd2d06a5453d3d278ddc",
+      "size": 2206
+    },
+    {
+      "path": "7k/2-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/2-mid-high.svg",
+      "sha256": "8d12ef5a1b977fb7fd6ffa03b4926fcacf095c2748c2a8fc254551ca4db75fb9",
+      "size": 2100
+    },
+    {
+      "path": "7k/2-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/2-mid-low.svg",
+      "sha256": "f407b7cafae1cf15ee1dfb85906886999424d889439f8378bc99aee2470122d8",
+      "size": 2077
+    },
+    {
+      "path": "7k/2.svg",
+      "sourcePath": "public/images/dans/7k/2.svg",
+      "sha256": "5d689af99bb9e686791f64861bd19e28878afecee20e39864f8e6d1faafdeeb9",
+      "size": 1729
+    },
+    {
+      "path": "7k/3-high.svg",
+      "sourcePath": "public/images/dans/7k/3-high.svg",
+      "sha256": "d3211f007e633c736d4494f6a8831db2edc54d4eb90d4095074652abff6622f9",
+      "size": 2364
+    },
+    {
+      "path": "7k/3-low.svg",
+      "sourcePath": "public/images/dans/7k/3-low.svg",
+      "sha256": "9092eea5656aed37834ee4f53b44bd6e694cf706ca036e738129c925e7d11c7d",
+      "size": 2318
+    },
+    {
+      "path": "7k/3-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/3-mid-high.svg",
+      "sha256": "73e4e052512ecdbba0c00aca9d9fd9e848e8aa23789afb19ee918b902e93ea33",
+      "size": 2212
+    },
+    {
+      "path": "7k/3-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/3-mid-low.svg",
+      "sha256": "9b3575f5cf6f8a60e87dc73b5f62552d897274b12894e8d8aee9dc851a74a21a",
+      "size": 2189
+    },
+    {
+      "path": "7k/3.svg",
+      "sourcePath": "public/images/dans/7k/3.svg",
+      "sha256": "bd1e083252c3b75265d926ae3234ec1bc9ee81172ed7cfac84b839b72789f239",
+      "size": 1841
+    },
+    {
+      "path": "7k/4-high.svg",
+      "sourcePath": "public/images/dans/7k/4-high.svg",
+      "sha256": "e0f55d09c2dd1c199480e3a403d89e654ee4def5297b10c63211afe9facc842e",
+      "size": 2299
+    },
+    {
+      "path": "7k/4-low.svg",
+      "sourcePath": "public/images/dans/7k/4-low.svg",
+      "sha256": "954cc96cb24045e95789de00cd438c4af84de0aeb3611016ccc391bfacc78124",
+      "size": 2253
+    },
+    {
+      "path": "7k/4-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/4-mid-high.svg",
+      "sha256": "29c96bdcf80e44565ecd8f45d0e4a51450d6bd4c11b54a05c3316cc51f143f8e",
+      "size": 2147
+    },
+    {
+      "path": "7k/4-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/4-mid-low.svg",
+      "sha256": "67a51e8f853856c055b3aaaa33c3dd1e89db901279e3c29ffab217c1c2b70abd",
+      "size": 2124
+    },
+    {
+      "path": "7k/4.svg",
+      "sourcePath": "public/images/dans/7k/4.svg",
+      "sha256": "af0b0053c30ad003f869c92f4a75db8355980ad702ed9df0091830de8dfc0850",
+      "size": 1776
+    },
+    {
+      "path": "7k/5-high.svg",
+      "sourcePath": "public/images/dans/7k/5-high.svg",
+      "sha256": "2c67012d555ff02b920d7036dc94feea898ef4d6dcf8895ac43552fafdec45d6",
+      "size": 2218
+    },
+    {
+      "path": "7k/5-low.svg",
+      "sourcePath": "public/images/dans/7k/5-low.svg",
+      "sha256": "85bf0d1e9d950a0521efd39ac619e61032313a3208d87de07572dca9dfd610f6",
+      "size": 2172
+    },
+    {
+      "path": "7k/5-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/5-mid-high.svg",
+      "sha256": "39c6dec74849caee391377fa0ffbc5dba72c3721fbaa77316695ac9b6f4883b6",
+      "size": 2066
+    },
+    {
+      "path": "7k/5-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/5-mid-low.svg",
+      "sha256": "bb60adec541d3cc0dd59f66300faa6c806e9c70a2ca7cb097c58f265ee07b47c",
+      "size": 2043
+    },
+    {
+      "path": "7k/5.svg",
+      "sourcePath": "public/images/dans/7k/5.svg",
+      "sha256": "96a56b611fba4cac1a6400a357383f507924904f828d00d9ab092c7160260298",
+      "size": 1695
+    },
+    {
+      "path": "7k/6-high.svg",
+      "sourcePath": "public/images/dans/7k/6-high.svg",
+      "sha256": "8c7f0d2bf421db28051d6f02957f54ec190719bad53a6306bd40d1058dc33dab",
+      "size": 2358
+    },
+    {
+      "path": "7k/6-low.svg",
+      "sourcePath": "public/images/dans/7k/6-low.svg",
+      "sha256": "b6e067def18c18138b79b2be7617c0ec80bd1a267f5eff23dbf892dfd37acbf8",
+      "size": 2312
+    },
+    {
+      "path": "7k/6-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/6-mid-high.svg",
+      "sha256": "16d3e98e56911b3c7f74b7fed861e45797b769147bacd2b94545dabf276303dc",
+      "size": 2206
+    },
+    {
+      "path": "7k/6-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/6-mid-low.svg",
+      "sha256": "ea7b6a559fa824af73a209542c4052c4e4d2ec711a4e60e03b06ede890d6c32e",
+      "size": 2183
+    },
+    {
+      "path": "7k/6.svg",
+      "sourcePath": "public/images/dans/7k/6.svg",
+      "sha256": "8e04ee38a5315aa40b4c5267af66d8b30d31a015efabcc56e54d8d5a10f71eb3",
+      "size": 1835
+    },
+    {
+      "path": "7k/7-high.svg",
+      "sourcePath": "public/images/dans/7k/7-high.svg",
+      "sha256": "efa20198e905e4a29ef822b200158763a874069781d4370776abb817add56439",
+      "size": 2210
+    },
+    {
+      "path": "7k/7-low.svg",
+      "sourcePath": "public/images/dans/7k/7-low.svg",
+      "sha256": "5259cc39da8f6845519e7daf861cea05e24fe5770ea80b0502d9059a6523326d",
+      "size": 2164
+    },
+    {
+      "path": "7k/7-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/7-mid-high.svg",
+      "sha256": "109517d5db60330bd23f4de97c44121ece8c8dd313a5d863c08ec91bc7a2b4ad",
+      "size": 2058
+    },
+    {
+      "path": "7k/7-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/7-mid-low.svg",
+      "sha256": "8ba2c31f5602b072ee80f1f5ddbf5e1bc2d8f5ac6d704fb74af16c1d752b08a3",
+      "size": 2035
+    },
+    {
+      "path": "7k/7.svg",
+      "sourcePath": "public/images/dans/7k/7.svg",
+      "sha256": "bbd1379ffc4ccf398ef1528ecb5921e9890ae8160443b58cddc7266b4f9c8595",
+      "size": 1687
+    },
+    {
+      "path": "7k/8-high.svg",
+      "sourcePath": "public/images/dans/7k/8-high.svg",
+      "sha256": "3c2f86c56d8f0751f51ee745e5dcade3add04c02b88682050d2c371001d9939a",
+      "size": 2445
+    },
+    {
+      "path": "7k/8-low.svg",
+      "sourcePath": "public/images/dans/7k/8-low.svg",
+      "sha256": "0cd4c48ac55ba1403d89d312c92f4dd29ff2e1476eb42f2f24a99f27032d00c6",
+      "size": 2399
+    },
+    {
+      "path": "7k/8-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/8-mid-high.svg",
+      "sha256": "1003b4ba3a2ca09e52b3f5af4f4423279f6467d0dde558fdfe3844c5c8f0a567",
+      "size": 2293
+    },
+    {
+      "path": "7k/8-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/8-mid-low.svg",
+      "sha256": "008a3062105b28371c5818f705d6f743cc4f1e318f1e5a1fb1d6f9b4dd928ba4",
+      "size": 2270
+    },
+    {
+      "path": "7k/8.svg",
+      "sourcePath": "public/images/dans/7k/8.svg",
+      "sha256": "06c42097fa7339f90a7097876c9a3e23ed239396949eb968143812e4401a4c1e",
+      "size": 1922
+    },
+    {
+      "path": "7k/9-high.svg",
+      "sourcePath": "public/images/dans/7k/9-high.svg",
+      "sha256": "5edf0359547cf762ff36d9a55fcd1cb84520629a6f44b940813bf5ccabcf333e",
+      "size": 2366
+    },
+    {
+      "path": "7k/9-low.svg",
+      "sourcePath": "public/images/dans/7k/9-low.svg",
+      "sha256": "757959456506bcacb6c643cc0836edd2c6134ea0dfd9e0856a3143c955c3ecfa",
+      "size": 2320
+    },
+    {
+      "path": "7k/9-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/9-mid-high.svg",
+      "sha256": "e33035ad7975850b567d820fc68749a9e50329cddc3710aaa4d76f64b361f964",
+      "size": 2214
+    },
+    {
+      "path": "7k/9-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/9-mid-low.svg",
+      "sha256": "c3a900dc9eaa4920290f82bb9065bf3ffd153833209e0b14476004e95b407e02",
+      "size": 2191
+    },
+    {
+      "path": "7k/9.svg",
+      "sourcePath": "public/images/dans/7k/9.svg",
+      "sha256": "7a49447598d697e4df64103764e7aae19192d5fb5fc3986053ff063c18d4be8c",
+      "size": 1843
+    },
+    {
+      "path": "7k/azimuth-high.svg",
+      "sourcePath": "public/images/dans/7k/azimuth-high.svg",
+      "sha256": "bd93dbf94b0678c78e6acadf2e84ee13983cf9973db659a8ee973c0e1a210253",
+      "size": 2823
+    },
+    {
+      "path": "7k/azimuth-low.svg",
+      "sourcePath": "public/images/dans/7k/azimuth-low.svg",
+      "sha256": "c54130477e5a5781dd7fc50ddecfa75c990b41f30fecd0cbccc45e51ef593786",
+      "size": 2777
+    },
+    {
+      "path": "7k/azimuth-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/azimuth-mid-high.svg",
+      "sha256": "f27b14e571a5a81ea305395d47968c81508db30691d4877fd4c6ef0ea608ea64",
+      "size": 2671
+    },
+    {
+      "path": "7k/azimuth-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/azimuth-mid-low.svg",
+      "sha256": "df5a9fb50c185024c3cfdfc293e94dbf06ed7e23384a73d866b179dc4f62d772",
+      "size": 2648
+    },
+    {
+      "path": "7k/azimuth.svg",
+      "sourcePath": "public/images/dans/7k/azimuth.svg",
+      "sha256": "6b60c43b2f53146c6dd783e35d09b2fe68da961e2f9935d2d63ffa6d12cef6ba",
+      "size": 2300
+    },
+    {
+      "path": "7k/gamma-high.svg",
+      "sourcePath": "public/images/dans/7k/gamma-high.svg",
+      "sha256": "c106c7e2abeb4eaca0c2adaa64af47a8225fe73322eea692b41b203b7da59f6f",
+      "size": 2812
+    },
+    {
+      "path": "7k/gamma-low.svg",
+      "sourcePath": "public/images/dans/7k/gamma-low.svg",
+      "sha256": "d7447a56178d0d62b653165dfebb0fce9a5a04d615184fd6ff2390b1f5978c45",
+      "size": 2766
+    },
+    {
+      "path": "7k/gamma-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/gamma-mid-high.svg",
+      "sha256": "4971ea7f164b1438e7db5278a9eface2fdcb2b7adcf3d961c6edec0290c4040c",
+      "size": 2660
+    },
+    {
+      "path": "7k/gamma-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/gamma-mid-low.svg",
+      "sha256": "2f74cd8d5258044eb11ef3ff158fccc9576da5bb3c578fffb439ad43228b3d4c",
+      "size": 2637
+    },
+    {
+      "path": "7k/gamma.svg",
+      "sourcePath": "public/images/dans/7k/gamma.svg",
+      "sha256": "f24ad5e4ec450f70a3b2d238265166efed299fb22734b7a7f452a12a84bec94f",
+      "size": 2289
+    },
+    {
+      "path": "7k/ln-0-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-0-high.svg",
+      "sha256": "8f722df382cf4e3ad386fe279de9e3e7ec8c743ecabeaf6328fe9c20f8e8b8bb",
+      "size": 2519
+    },
+    {
+      "path": "7k/ln-0-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-0-low.svg",
+      "sha256": "cbe3d5e38fc67a75fcfc8e04f49f1e32292b1b743c2e4fa11f6602bddf70b6e6",
+      "size": 2473
+    },
+    {
+      "path": "7k/ln-0-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-0-mid-high.svg",
+      "sha256": "edb8ea8157395b97c74d3ef4aee4a143eafc23cc7072ed90e1b7b891fdcf6838",
+      "size": 2367
+    },
+    {
+      "path": "7k/ln-0-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-0-mid-low.svg",
+      "sha256": "2689841dba42b3d80fdfe77dfe655700dd1c955c8b707db1182eb3bd2a48fa8a",
+      "size": 2344
+    },
+    {
+      "path": "7k/ln-0.svg",
+      "sourcePath": "public/images/dans/7k/ln-0.svg",
+      "sha256": "6cbdd7096690c3c1c3b9c7b1e0d313d5461f8a8521a99ce4e1df67a06a883af1",
+      "size": 1996
+    },
+    {
+      "path": "7k/ln-1-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-1-high.svg",
+      "sha256": "afbd401f77ca101d897fb52be6d1c16ca57dbee7c41485b98b7aede0dacf7618",
+      "size": 2449
+    },
+    {
+      "path": "7k/ln-1-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-1-low.svg",
+      "sha256": "05bf74b2aa531fa01d36d8edfbd46a52f4d39c4b15853112c04af1302062b59f",
+      "size": 2403
+    },
+    {
+      "path": "7k/ln-1-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-1-mid-high.svg",
+      "sha256": "6404c63c30c4c5bc6f27c40f6bc9e801d5564883bb8b8507e7f7c7c8e6578fb3",
+      "size": 2297
+    },
+    {
+      "path": "7k/ln-1-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-1-mid-low.svg",
+      "sha256": "ed0d9973849309489503db5c7988aafd63f334a233220cfaf73b5d2236be80e4",
+      "size": 2274
+    },
+    {
+      "path": "7k/ln-1.svg",
+      "sourcePath": "public/images/dans/7k/ln-1.svg",
+      "sha256": "4f3efacc0917aaf5d07746f1f42124e51bfcfb22d3a63dac7b4780c9d565b4c1",
+      "size": 1926
+    },
+    {
+      "path": "7k/ln-10-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-10-high.svg",
+      "sha256": "2d2321ed17e7d0ad664ac4712a108b484114745500c809871246917366c41a62",
+      "size": 2728
+    },
+    {
+      "path": "7k/ln-10-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-10-low.svg",
+      "sha256": "f860e9e132013f5e188d6cbb30efd346c98689d0c8c67c113394c7353feb376e",
+      "size": 2682
+    },
+    {
+      "path": "7k/ln-10-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-10-mid-high.svg",
+      "sha256": "f0afd7b0a81b4ce6ada9e3ba73f1bc196c6fb0c0f01b6df3341773fc802c93ab",
+      "size": 2576
+    },
+    {
+      "path": "7k/ln-10-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-10-mid-low.svg",
+      "sha256": "32a7713af87a875d8c9ead682e6cf70e2894c59793f1340d8276e4093b39bd66",
+      "size": 2553
+    },
+    {
+      "path": "7k/ln-10.svg",
+      "sourcePath": "public/images/dans/7k/ln-10.svg",
+      "sha256": "3809305d5cfbe2fba0f8d354d6fffe25da4817cd3090f52619b6e16b5e6d7c7a",
+      "size": 2205
+    },
+    {
+      "path": "7k/ln-2-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-2-high.svg",
+      "sha256": "9609009e11b4a556916d136a0d7c981c12f69d7dd6cbd4a2443886540094264b",
+      "size": 2514
+    },
+    {
+      "path": "7k/ln-2-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-2-low.svg",
+      "sha256": "3abefc8155920337ddf028bc2455b1860358343ffb8e30ec34ad0f07169f2cc9",
+      "size": 2468
+    },
+    {
+      "path": "7k/ln-2-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-2-mid-high.svg",
+      "sha256": "aedbd9a5dd217869ff36f8135bee3f6d20ead9ee64f66bd58bda324f210e8b1f",
+      "size": 2362
+    },
+    {
+      "path": "7k/ln-2-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-2-mid-low.svg",
+      "sha256": "365c9c8dc89b760c39d68214bed7719a3f14c6c864f221c32ec2944e6bd6b2d1",
+      "size": 2339
+    },
+    {
+      "path": "7k/ln-2.svg",
+      "sourcePath": "public/images/dans/7k/ln-2.svg",
+      "sha256": "1a5139cf300f80ed66b93c7d4b667dc167fe44f2af27f7ca29031625e4db2c94",
+      "size": 1991
+    },
+    {
+      "path": "7k/ln-3-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-3-high.svg",
+      "sha256": "66812ae4817359e635c1a08c3f7e81711e532b0b91a98358be00cbe23cdaacf7",
+      "size": 2626
+    },
+    {
+      "path": "7k/ln-3-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-3-low.svg",
+      "sha256": "01d16f7311bc7d926cb4a0fc92e13ffa8f96a1581a0df1ba72ac7f59fac3f976",
+      "size": 2580
+    },
+    {
+      "path": "7k/ln-3-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-3-mid-high.svg",
+      "sha256": "7d959998e0081b6fdeeb31de804be6fa3ae042e30c38aca2f6b644c9b3f187fb",
+      "size": 2474
+    },
+    {
+      "path": "7k/ln-3-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-3-mid-low.svg",
+      "sha256": "d8c49ab211d761b0d27a6704111bd47fd557cbf2c582e9c33d70d5c2e7e10ac3",
+      "size": 2451
+    },
+    {
+      "path": "7k/ln-3.svg",
+      "sourcePath": "public/images/dans/7k/ln-3.svg",
+      "sha256": "7988d2a41c139779da6c337b0f02eac6a6074a23304d956637cdd04dbcf5b3a5",
+      "size": 2103
+    },
+    {
+      "path": "7k/ln-4-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-4-high.svg",
+      "sha256": "1f78a0d611985fece4a049555b73d1e2bd4cf2ceddcc981fee53a9cad3577bc2",
+      "size": 2561
+    },
+    {
+      "path": "7k/ln-4-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-4-low.svg",
+      "sha256": "5d9c7bfda88fe75bc5b59850d8ddb21312b88f86fa8b88e0ad9184117c64485a",
+      "size": 2515
+    },
+    {
+      "path": "7k/ln-4-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-4-mid-high.svg",
+      "sha256": "e491770b1f3e969371051e2b3914bf03959f709822b1297d3e58ad8d65d97bca",
+      "size": 2409
+    },
+    {
+      "path": "7k/ln-4-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-4-mid-low.svg",
+      "sha256": "a008138e17ef06074aeee751f9779052a0f347010f38e5d514f4179d8b3eb550",
+      "size": 2386
+    },
+    {
+      "path": "7k/ln-4.svg",
+      "sourcePath": "public/images/dans/7k/ln-4.svg",
+      "sha256": "35261caf3361749d9fccdbb8e459c00a6db08fc3a68e0cbdf68906855e1fb1b1",
+      "size": 2038
+    },
+    {
+      "path": "7k/ln-5-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-5-high.svg",
+      "sha256": "7a78e0a96a2ab48768a28f2a4e7be8fdaff1517b1d2132ba8e63c0e2ecb8b460",
+      "size": 2480
+    },
+    {
+      "path": "7k/ln-5-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-5-low.svg",
+      "sha256": "ba97ccb48f61c80d56ab84ed766f13f558e83782dda9a45c978a1cffd3bc7bc5",
+      "size": 2434
+    },
+    {
+      "path": "7k/ln-5-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-5-mid-high.svg",
+      "sha256": "90a6ff340ba88e3a3fe35c9074ca60d31c25b11ed721bdff187e917bba78546d",
+      "size": 2328
+    },
+    {
+      "path": "7k/ln-5-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-5-mid-low.svg",
+      "sha256": "6c8c167e7d8133e8b0bea697c1e8a2b3200d7f676da8b41cdb86fc65a3e81134",
+      "size": 2305
+    },
+    {
+      "path": "7k/ln-5.svg",
+      "sourcePath": "public/images/dans/7k/ln-5.svg",
+      "sha256": "273f6ab2798ddb3ce03ed94d39405d30b019bd3ef7eba761a37eda83840f1559",
+      "size": 1957
+    },
+    {
+      "path": "7k/ln-6-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-6-high.svg",
+      "sha256": "46495149a97ad9a380b2525f4b30fc70fce93db768c6eb1c1296e40a844c30db",
+      "size": 2620
+    },
+    {
+      "path": "7k/ln-6-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-6-low.svg",
+      "sha256": "0d2203a0c44c60afac7e0c4f79592313bb651a7d74857796557dd4bb6a95589f",
+      "size": 2574
+    },
+    {
+      "path": "7k/ln-6-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-6-mid-high.svg",
+      "sha256": "758716aa600539372ddf5f0d3fdbab77f2901cf5e1cc280bc05d0884f9b8a334",
+      "size": 2468
+    },
+    {
+      "path": "7k/ln-6-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-6-mid-low.svg",
+      "sha256": "0f2ac3a74ba9902aa8d55b627be44aa3403c5a7f68327ff9e181a2ea89ef42ac",
+      "size": 2445
+    },
+    {
+      "path": "7k/ln-6.svg",
+      "sourcePath": "public/images/dans/7k/ln-6.svg",
+      "sha256": "e50324e61055c5adba92781908869980c039b6a0a361a118b303b31cab10f9a1",
+      "size": 2097
+    },
+    {
+      "path": "7k/ln-7-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-7-high.svg",
+      "sha256": "094dbfce4528d9f76d31e6180e774c7f4b1cd0ba554fddcfa615ce96dd49d5a5",
+      "size": 2472
+    },
+    {
+      "path": "7k/ln-7-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-7-low.svg",
+      "sha256": "8802618082749d37d83ba7d2f25d10ff09e3f16dd9ac6e75e99d5158914b8ca1",
+      "size": 2426
+    },
+    {
+      "path": "7k/ln-7-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-7-mid-high.svg",
+      "sha256": "23ed6b8f1d99dffa491c83f1055f14ccb5c248c3e3e8ce3b2345b76237e7e858",
+      "size": 2320
+    },
+    {
+      "path": "7k/ln-7-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-7-mid-low.svg",
+      "sha256": "eddadbb9ab6dec3303b1bdcf0fe07097cd197c9b73f83076205972ca64186ab4",
+      "size": 2297
+    },
+    {
+      "path": "7k/ln-7.svg",
+      "sourcePath": "public/images/dans/7k/ln-7.svg",
+      "sha256": "e41fce1e226de5e016ef336da322bdfc235c85a6796a537b9875d11514a786bb",
+      "size": 1949
+    },
+    {
+      "path": "7k/ln-8-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-8-high.svg",
+      "sha256": "6822d5c0a19cee94da2c26ad2e49e43ad7495d7da84bff68297dd4bd531d8538",
+      "size": 2707
+    },
+    {
+      "path": "7k/ln-8-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-8-low.svg",
+      "sha256": "ab0803a437a2a1ff74c96dd5d2674ef458b0c599f43ebdb79122ca8dab5c4b3a",
+      "size": 2661
+    },
+    {
+      "path": "7k/ln-8-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-8-mid-high.svg",
+      "sha256": "5889cfc5b1fa893a7b5d18f0bce992ffe9f77bf68a1e909329a49131573faa42",
+      "size": 2555
+    },
+    {
+      "path": "7k/ln-8-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-8-mid-low.svg",
+      "sha256": "1d5699d2bd61a8022e2ae124d7fe973f9dc8ee16729c75d6e05f5506b4fb0916",
+      "size": 2532
+    },
+    {
+      "path": "7k/ln-8.svg",
+      "sourcePath": "public/images/dans/7k/ln-8.svg",
+      "sha256": "58ce319bc0b22f7ff131d8098af8f92846fdcdd9a5e4f27cdada9644b3308331",
+      "size": 2184
+    },
+    {
+      "path": "7k/ln-9-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-9-high.svg",
+      "sha256": "90f1e8133eb805f3ef86642aa84d6c3e4f860e1c346678dd5bff5896623777f8",
+      "size": 2628
+    },
+    {
+      "path": "7k/ln-9-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-9-low.svg",
+      "sha256": "ce3138aaa7832e2aa6e6738f6a29d5d7b956edcc326ef7922db77326dfd667fe",
+      "size": 2582
+    },
+    {
+      "path": "7k/ln-9-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-9-mid-high.svg",
+      "sha256": "80ca2c34599cdf3ac69b8b8ba1cc4e009815c6d060894ac39cabe38e1d56ca69",
+      "size": 2476
+    },
+    {
+      "path": "7k/ln-9-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-9-mid-low.svg",
+      "sha256": "4ed2e4094adba2bc99adc1a9dd3d9259705fcb2df6acd032ddd2611e9572610f",
+      "size": 2453
+    },
+    {
+      "path": "7k/ln-9.svg",
+      "sourcePath": "public/images/dans/7k/ln-9.svg",
+      "sha256": "db327723b1353889593738be9039cfabe09952306cbcae0fa567c2216b58d6d0",
+      "size": 2105
+    },
+    {
+      "path": "7k/ln-azimuth-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-azimuth-high.svg",
+      "sha256": "ccbdad4383fc51c63a8bbc119af08627ee99b199035f8b3491f7fa32e8e98c01",
+      "size": 3083
+    },
+    {
+      "path": "7k/ln-azimuth-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-azimuth-low.svg",
+      "sha256": "7791e88eba88df14b5d7ec07a504c6a2af2cc5e6b36ce129bffe411d0ea43653",
+      "size": 3037
+    },
+    {
+      "path": "7k/ln-azimuth-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-azimuth-mid-high.svg",
+      "sha256": "064cbc0e5f4692b6287d8a6bbf14d66453c25a4e60312f9bccaa05b911cd0d14",
+      "size": 2931
+    },
+    {
+      "path": "7k/ln-azimuth-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-azimuth-mid-low.svg",
+      "sha256": "8635c96b2a6b3a8264262d82f960fe7afbad881fe9a3247c562f5ed458418f1c",
+      "size": 2908
+    },
+    {
+      "path": "7k/ln-azimuth.svg",
+      "sourcePath": "public/images/dans/7k/ln-azimuth.svg",
+      "sha256": "4c6c8b07db7ad31bad6b4aa26018bc2909705f81552462a54cc183d0b2f7282c",
+      "size": 2560
+    },
+    {
+      "path": "7k/ln-gamma-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-gamma-high.svg",
+      "sha256": "5871a660dbf42a7629ad57a610e5a467ed7871e01c2c08c9ee7fa7be22eb93d6",
+      "size": 3072
+    },
+    {
+      "path": "7k/ln-gamma-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-gamma-low.svg",
+      "sha256": "f650da3d5d891ba87007ea7e30307c794e6a12d57af76010a25a37cb2cd6524f",
+      "size": 3026
+    },
+    {
+      "path": "7k/ln-gamma-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-gamma-mid-high.svg",
+      "sha256": "5d10edc7db5872e59a9cff23b1626fb6b9fb292b4573c0b08b835ec14745daf9",
+      "size": 2920
+    },
+    {
+      "path": "7k/ln-gamma-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-gamma-mid-low.svg",
+      "sha256": "72f94a1c97cbbf5a4da15e36c0e654f5d62b4b97834ac349bd2d8e716e93fe6f",
+      "size": 2897
+    },
+    {
+      "path": "7k/ln-gamma.svg",
+      "sourcePath": "public/images/dans/7k/ln-gamma.svg",
+      "sha256": "82bb37db00aee2ba4e996a274f8bd3a395fbce73f50d1652215253324c55b3eb",
+      "size": 2549
+    },
+    {
+      "path": "7k/ln-stellium-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-stellium-high.svg",
+      "sha256": "8edf4a7fd2f0446c8f4c2491ae39abb26803fa05f8d598ef662fda6d2a8a6581",
+      "size": 2529
+    },
+    {
+      "path": "7k/ln-stellium-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-stellium-low.svg",
+      "sha256": "6e1b7bb9d7d157739c8ace80215ac53e727a62321def42ae34e0a7360280b31f",
+      "size": 2483
+    },
+    {
+      "path": "7k/ln-stellium-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-stellium-mid-high.svg",
+      "sha256": "a2fe5aca7163232c9d54a7ce14a79c47289b8abceab7d3c73cae38f624c6f7e0",
+      "size": 2377
+    },
+    {
+      "path": "7k/ln-stellium-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-stellium-mid-low.svg",
+      "sha256": "14eab47359b792f0c70abdc9685b85fd5dd0152865db7435b407ae1fa7a3c73b",
+      "size": 2354
+    },
+    {
+      "path": "7k/ln-stellium.svg",
+      "sourcePath": "public/images/dans/7k/ln-stellium.svg",
+      "sha256": "7f433a5687302cf5b74c92de722c22b7d3034d71ca71707ed5b0026f2d24997f",
+      "size": 2006
+    },
+    {
+      "path": "7k/ln-zenith-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-zenith-high.svg",
+      "sha256": "e8160a3ee673d87b0cd6e3505d615b2a9061cb9cc34adb99d9687508d53f3212",
+      "size": 3147
+    },
+    {
+      "path": "7k/ln-zenith-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-zenith-low.svg",
+      "sha256": "e83fed986e500e40a1a86295f5083acd63af69ae00a285fc08a9f169908dd518",
+      "size": 3101
+    },
+    {
+      "path": "7k/ln-zenith-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/ln-zenith-mid-high.svg",
+      "sha256": "21ebca334b52f845e946931a256da8cf71c436391ca1bf326b6a598cad5cc0c7",
+      "size": 2995
+    },
+    {
+      "path": "7k/ln-zenith-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/ln-zenith-mid-low.svg",
+      "sha256": "f3a54eec357dca7f895a264bcd297ad0ca164c081a6cc93f3afde4665737893f",
+      "size": 2972
+    },
+    {
+      "path": "7k/ln-zenith.svg",
+      "sourcePath": "public/images/dans/7k/ln-zenith.svg",
+      "sha256": "f97dd147032f7102351f657c536b510b7b1b7e58b1324f6c96b3e65f536bfd1b",
+      "size": 2624
+    },
+    {
+      "path": "7k/stellium-high.svg",
+      "sourcePath": "public/images/dans/7k/stellium-high.svg",
+      "sha256": "4b4a3958ec0e7e2004161693d42f91a65d73fa85666dd5304e9bf28c1bc246c6",
+      "size": 2267
+    },
+    {
+      "path": "7k/stellium-low.svg",
+      "sourcePath": "public/images/dans/7k/stellium-low.svg",
+      "sha256": "d8785c7d7768049e407ce7a142c3f66a56265966ac87484bfbe0f127a6262be0",
+      "size": 2221
+    },
+    {
+      "path": "7k/stellium-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/stellium-mid-high.svg",
+      "sha256": "fc1906ed7af83ffb8edc607baabb1999ce1ddcde98c38d54133ef247b7fc7fb8",
+      "size": 2115
+    },
+    {
+      "path": "7k/stellium-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/stellium-mid-low.svg",
+      "sha256": "3bd369f6c4d8f7942ecef8b6d891d45c01535d9b2391130e9b495c05c38af153",
+      "size": 2092
+    },
+    {
+      "path": "7k/stellium.svg",
+      "sourcePath": "public/images/dans/7k/stellium.svg",
+      "sha256": "da12760284c8309c5a98179b0b7d35a5304b095d3a4566ec0a3f15f04d592462",
+      "size": 1744
+    },
+    {
+      "path": "7k/zenith-high.svg",
+      "sourcePath": "public/images/dans/7k/zenith-high.svg",
+      "sha256": "560bd7a476d9a6d1142eb9283a17697d128f2ee8a40fbd54bb4514f1afbc1433",
+      "size": 2889
+    },
+    {
+      "path": "7k/zenith-low.svg",
+      "sourcePath": "public/images/dans/7k/zenith-low.svg",
+      "sha256": "149faeb98f243ac0400b26b408bbfdf642a71837a339ecf8293cffc64e3b9334",
+      "size": 2843
+    },
+    {
+      "path": "7k/zenith-mid-high.svg",
+      "sourcePath": "public/images/dans/7k/zenith-mid-high.svg",
+      "sha256": "26627cb6a5ea2d88853e32ce81d7782ad8fe63fc2e392474951e237d219cf9a3",
+      "size": 2737
+    },
+    {
+      "path": "7k/zenith-mid-low.svg",
+      "sourcePath": "public/images/dans/7k/zenith-mid-low.svg",
+      "sha256": "809c2d1a77098c4f46e3cf601f16e10de4a53cfd3f547ecbe714ab465fbe9829",
+      "size": 2714
+    },
+    {
+      "path": "7k/zenith.svg",
+      "sourcePath": "public/images/dans/7k/zenith.svg",
+      "sha256": "e7637c33082e5ce281f3f875ff4654e26babaa428d6e8bce8932ef2772392df3",
+      "size": 2366
+    },
+    {
+      "path": "reform/1-high.svg",
+      "sourcePath": "public/images/dans/reform/1-high.svg",
+      "sha256": "f6e6fd4fde668bbc2f4b42f513ecb544fcbe4af0defcf88306b09b5426306e1e",
+      "size": 4484
+    },
+    {
+      "path": "reform/1-low.svg",
+      "sourcePath": "public/images/dans/reform/1-low.svg",
+      "sha256": "9c543a2117acf32461a9b353dabe6965efd740708c81bb37365bc9ad2469de7d",
+      "size": 3884
+    },
+    {
+      "path": "reform/1-mid-high.svg",
+      "sourcePath": "public/images/dans/reform/1-mid-high.svg",
+      "sha256": "a7a1a02867e93d359316edd27c90a14b6fc8d9a427dca8b4c24ae396a2035b64",
+      "size": 3720
+    },
+    {
+      "path": "reform/1-mid-low.svg",
+      "sourcePath": "public/images/dans/reform/1-mid-low.svg",
+      "sha256": "7a966452b423f36115c8d3e01f9c5553162774f4a6839671d6c123d477dda013",
+      "size": 3432
+    },
+    {
+      "path": "reform/1.svg",
+      "sourcePath": "public/images/dans/reform/1.svg",
+      "sha256": "e2c8878eeefecf193e8343e297f5dc7e032e1aea5727d226c394aab10324613c",
+      "size": 2992
+    },
+    {
+      "path": "reform/10-high.svg",
+      "sourcePath": "public/images/dans/reform/10-high.svg",
+      "sha256": "e9cea50b5246f56e9d325665d7900fd6a4466cf7b00a9eb6a9a4bbbe6e677dc4",
+      "size": 6366
+    },
+    {
+      "path": "reform/10-low.svg",
+      "sourcePath": "public/images/dans/reform/10-low.svg",
+      "sha256": "3d5d05f518a9d5038a1d81ff05e6978a8b45c49150aa219dc23ef78ea86094f4",
+      "size": 5766
+    },
+    {
+      "path": "reform/10-mid-high.svg",
+      "sourcePath": "public/images/dans/reform/10-mid-high.svg",
+      "sha256": "9388c70b90d3c9aeac1cf5d9ca493a4aece1cf923de1766bf4a7564afbec5c8d",
+      "size": 5603
+    },
+    {
+      "path": "reform/10-mid-low.svg",
+      "sourcePath": "public/images/dans/reform/10-mid-low.svg",
+      "sha256": "c2808800c00e35c1c4161224e6c4c3115cfee46890436fd4e05128df844e76b0",
+      "size": 5315
+    },
+    {
+      "path": "reform/10.svg",
+      "sourcePath": "public/images/dans/reform/10.svg",
+      "sha256": "a739b54bd0a0f36515aa8aae11f5f0f7ae27136fc91b9aa9d0f089d9e3556e71",
+      "size": 4870
+    },
+    {
+      "path": "reform/2-high.svg",
+      "sourcePath": "public/images/dans/reform/2-high.svg",
+      "sha256": "5a5a65a7d0b02054673eb31bbdbc70357a5196318ce0487951ddd77375e8eecc",
+      "size": 4886
+    },
+    {
+      "path": "reform/2-low.svg",
+      "sourcePath": "public/images/dans/reform/2-low.svg",
+      "sha256": "ee500427fab77a9e670b38c9f54b3c82ec112d794b59e3db7c64a6fdab550a61",
+      "size": 4286
+    },
+    {
+      "path": "reform/2-mid-high.svg",
+      "sourcePath": "public/images/dans/reform/2-mid-high.svg",
+      "sha256": "419980ca2b241f247469b4ba2930fe4acac743e594efa42cc44e0b4071107c2c",
+      "size": 4122
+    },
+    {
+      "path": "reform/2-mid-low.svg",
+      "sourcePath": "public/images/dans/reform/2-mid-low.svg",
+      "sha256": "b7d998dcff8bbc48f31439bed0264bb30704b96a0919580052cb1ff03ec22e9f",
+      "size": 3834
+    },
+    {
+      "path": "reform/2.svg",
+      "sourcePath": "public/images/dans/reform/2.svg",
+      "sha256": "2c383bd1f8826ce2a3e8b25eea1bf54730b1db1e72662d805886b77bac773d2a",
+      "size": 3388
+    },
+    {
+      "path": "reform/3-high.svg",
+      "sourcePath": "public/images/dans/reform/3-high.svg",
+      "sha256": "69debdca3d03a87b13e4d3d3753fed0e4e3897d91b5d23be6c6e441cccfc5c6e",
+      "size": 6662
+    },
+    {
+      "path": "reform/3-low.svg",
+      "sourcePath": "public/images/dans/reform/3-low.svg",
+      "sha256": "0e532cf1fbb834f405a559300b85880cabf85f1d293fd25965cdde4bb1b24e59",
+      "size": 6050
+    },
+    {
+      "path": "reform/3-mid-high.svg",
+      "sourcePath": "public/images/dans/reform/3-mid-high.svg",
+      "sha256": "392ced343acf25be49b57f48fe98d5fdedf5c4d8501787a82f66029b79a4e0d9",
+      "size": 5898
+    },
+    {
+      "path": "reform/3-mid-low.svg",
+      "sourcePath": "public/images/dans/reform/3-mid-low.svg",
+      "sha256": "f53ff1cb83698d8eb0706631ff662da9f0c93fb3f45b397dfe0291dd692f27f5",
+      "size": 5598
+    },
+    {
+      "path": "reform/3.svg",
+      "sourcePath": "public/images/dans/reform/3.svg",
+      "sha256": "4240f1c4058dfebfb44479566d9ec00e75b264327c9f6dc10c0021273397ab66",
+      "size": 5152
+    },
+    {
+      "path": "reform/4-high.svg",
+      "sourcePath": "public/images/dans/reform/4-high.svg",
+      "sha256": "b146094d5c99f194fd4368646c4559248931a8a8642f0b6611ffcaaae6641e32",
+      "size": 3674
+    },
+    {
+      "path": "reform/4-low.svg",
+      "sourcePath": "public/images/dans/reform/4-low.svg",
+      "sha256": "63c72f0e4921e4344ddd301090fc2e3d6ff06d66771ba9e0e3b417d1b30f628b",
+      "size": 3062
+    },
+    {
+      "path": "reform/4-mid-high.svg",
+      "sourcePath": "public/images/dans/reform/4-mid-high.svg",
+      "sha256": "562c7f203127b4cf1fc109c3bea0f0b715b78d1bfad7687447cd590c80165dec",
+      "size": 2910
+    },
+    {
+      "path": "reform/4-mid-low.svg",
+      "sourcePath": "public/images/dans/reform/4-mid-low.svg",
+      "sha256": "b7b2da013746f5ffe01b3a045a78ee327485f32774a760c844a85224ca4d542b",
+      "size": 2610
+    },
+    {
+      "path": "reform/4.svg",
+      "sourcePath": "public/images/dans/reform/4.svg",
+      "sha256": "d925455185e7cc459345cd3282b68bef7be00060af1c639072acddcf2d2c6575",
+      "size": 2164
+    },
+    {
+      "path": "reform/5-high.svg",
+      "sourcePath": "public/images/dans/reform/5-high.svg",
+      "sha256": "a9963a2f08e3227815dcfe2c0a9f9b953592ed714d8f075c94fd34d4ea401e66",
+      "size": 4970
+    },
+    {
+      "path": "reform/5-low.svg",
+      "sourcePath": "public/images/dans/reform/5-low.svg",
+      "sha256": "4c37dc2d3ee042b264fd002142e8142f2cdce5f64c7ccdd0d936c56c7463f6ae",
+      "size": 4358
+    },
+    {
+      "path": "reform/5-mid-high.svg",
+      "sourcePath": "public/images/dans/reform/5-mid-high.svg",
+      "sha256": "8b47c63fb748a64c42734177bb751b2c5ef1dcdea78b0aeb630d7927701a1ce9",
+      "size": 4206
+    },
+    {
+      "path": "reform/5-mid-low.svg",
+      "sourcePath": "public/images/dans/reform/5-mid-low.svg",
+      "sha256": "2de7da6f4f80b17d578d75ff5cd64a2d6e9c8dc3505c9b02b5c290a4bf95d154",
+      "size": 3906
+    },
+    {
+      "path": "reform/5.svg",
+      "sourcePath": "public/images/dans/reform/5.svg",
+      "sha256": "9d887edc59fa2651171dfe1ffb38ee55eb4ae8a918f8b878ff67ce6e4009e9d7",
+      "size": 3460
+    },
+    {
+      "path": "reform/6-high.svg",
+      "sourcePath": "public/images/dans/reform/6-high.svg",
+      "sha256": "039f3d1b10059eed8582f1e70509d4c93bf9b119e9e8659ca3673fe40f432d2d",
+      "size": 5180
+    },
+    {
+      "path": "reform/6-low.svg",
+      "sourcePath": "public/images/dans/reform/6-low.svg",
+      "sha256": "07dbdac8feca9344f6cec4b2d41152e8b437c17835cce0a912860932d935fcae",
+      "size": 4568
+    },
+    {
+      "path": "reform/6-mid-high.svg",
+      "sourcePath": "public/images/dans/reform/6-mid-high.svg",
+      "sha256": "048555935a66627ca9eb2c15df5161abf29f2b13f70a5423ab8c77b5037d4a23",
+      "size": 4416
+    },
+    {
+      "path": "reform/6-mid-low.svg",
+      "sourcePath": "public/images/dans/reform/6-mid-low.svg",
+      "sha256": "8e11dd6d0cb866256abdac6fdddd7157b5bbe1764bb56f192c0267de9b509612",
+      "size": 4116
+    },
+    {
+      "path": "reform/6.svg",
+      "sourcePath": "public/images/dans/reform/6.svg",
+      "sha256": "f00bf227d3f50d0abdd4e6b8e848f41a09dc5d0785bf27201730e3f0b489a7cd",
+      "size": 3670
+    },
+    {
+      "path": "reform/7-high.svg",
+      "sourcePath": "public/images/dans/reform/7-high.svg",
+      "sha256": "a0b8c3f120d12cb8e5abd66f27371cbeaa46dd72a8aab0e931471411a382b43e",
+      "size": 3278
+    },
+    {
+      "path": "reform/7-low.svg",
+      "sourcePath": "public/images/dans/reform/7-low.svg",
+      "sha256": "be2f34c2b048d8098213b6c7dbc2c5e718fc320215cdc91bde45ac08bbe72b6b",
+      "size": 2666
+    },
+    {
+      "path": "reform/7-mid-high.svg",
+      "sourcePath": "public/images/dans/reform/7-mid-high.svg",
+      "sha256": "17c9ad0a82419e5ad055d8afbcf54385375a588fb142cdaa05218f25b94eb41f",
+      "size": 2514
+    },
+    {
+      "path": "reform/7-mid-low.svg",
+      "sourcePath": "public/images/dans/reform/7-mid-low.svg",
+      "sha256": "fba32dfd9497e7ba350cce2639149122904c3031b3d35dc8020dfa3d5d3652b3",
+      "size": 2214
+    },
+    {
+      "path": "reform/7.svg",
+      "sourcePath": "public/images/dans/reform/7.svg",
+      "sha256": "1c2b2c341b7b15acdf6a0ea09746248add6a02ce9f6dd49b0a5214bb73d23131",
+      "size": 1768
+    },
+    {
+      "path": "reform/8-high.svg",
+      "sourcePath": "public/images/dans/reform/8-high.svg",
+      "sha256": "50ef0430b28fff2546082a90c7324956b02383261e8fef79c1adcbb1a64f4dab",
+      "size": 6128
+    },
+    {
+      "path": "reform/8-low.svg",
+      "sourcePath": "public/images/dans/reform/8-low.svg",
+      "sha256": "64eb0d8e59b48d7089c37f607f2cece6880c56343ac0ba40a89993ab8b73ef18",
+      "size": 5516
+    },
+    {
+      "path": "reform/8-mid-high.svg",
+      "sourcePath": "public/images/dans/reform/8-mid-high.svg",
+      "sha256": "e4b50eaee411e944cd8ff67a9271073e8fdeb5223c462818feca08e77c4d9e3f",
+      "size": 5364
+    },
+    {
+      "path": "reform/8-mid-low.svg",
+      "sourcePath": "public/images/dans/reform/8-mid-low.svg",
+      "sha256": "a67b8a5f60a67e3332c714f877c0f086d2bb6d648070ba808ffabb77c3fbacf3",
+      "size": 5064
+    },
+    {
+      "path": "reform/8.svg",
+      "sourcePath": "public/images/dans/reform/8.svg",
+      "sha256": "2efac091eb76adc49f4e4d7ef2270de4b3e4fc76b6f676e9d641fb4410481fc6",
+      "size": 4618
+    },
+    {
+      "path": "reform/9-high.svg",
+      "sourcePath": "public/images/dans/reform/9-high.svg",
+      "sha256": "81515a08d87b702ecccb1e5fc8d5326bd4143faf429750bc1b069909eb25334d",
+      "size": 5189
+    },
+    {
+      "path": "reform/9-low.svg",
+      "sourcePath": "public/images/dans/reform/9-low.svg",
+      "sha256": "6f2104ad5e5caf45a1a1b46767fae5eb5535bcb6f522670c6184fa83f97c3223",
+      "size": 4577
+    },
+    {
+      "path": "reform/9-mid-high.svg",
+      "sourcePath": "public/images/dans/reform/9-mid-high.svg",
+      "sha256": "bd40704ae26a3289a215b829832ec96a3b5fe2e516466d5a899430f4989ac740",
+      "size": 4425
+    },
+    {
+      "path": "reform/9-mid-low.svg",
+      "sourcePath": "public/images/dans/reform/9-mid-low.svg",
+      "sha256": "1f265a0e655f8b2edd93a09bca1be9e828269ee0403a631d9ba5c14ed897df34",
+      "size": 4125
+    },
+    {
+      "path": "reform/9.svg",
+      "sourcePath": "public/images/dans/reform/9.svg",
+      "sha256": "a9a9188f15908a74f847614a29920f7d071941a1c2b3d66633d33c4be40e69de",
+      "size": 3679
+    },
+    {
+      "path": "reform/alpha-high.webp",
+      "sourcePath": "public/images/dans/reform/alpha-high.webp",
+      "sha256": "7b2dc3d96673d80bf299118887f1fd02a41d7fac8bcf8492e5c0390de78f0d9d",
+      "size": 9648
+    },
+    {
+      "path": "reform/alpha-low.webp",
+      "sourcePath": "public/images/dans/reform/alpha-low.webp",
+      "sha256": "863f467c26b4d5fdd3734ca38ebf2d7be0d626a731b7e9360076926495a961d4",
+      "size": 8646
+    },
+    {
+      "path": "reform/alpha-mid-high.webp",
+      "sourcePath": "public/images/dans/reform/alpha-mid-high.webp",
+      "sha256": "ec9920c49976fe0a007ec2fa3bcdcdbcc47a35b24d488513257a08299e408438",
+      "size": 8644
+    },
+    {
+      "path": "reform/alpha-mid-low.webp",
+      "sourcePath": "public/images/dans/reform/alpha-mid-low.webp",
+      "sha256": "d54fd97ad87f9cc267e329f608a50674d787a07eac4713cfcdc1a97a050998ab",
+      "size": 7994
+    },
+    {
+      "path": "reform/alpha.webp",
+      "sourcePath": "public/images/dans/reform/alpha.webp",
+      "sha256": "48c6dbfbb65a104bcee822ac80d4817f050cd1e9d03c0c7b9b2c2556bc8d0b4e",
+      "size": 7552
+    },
+    {
+      "path": "reform/beta-high.webp",
+      "sourcePath": "public/images/dans/reform/beta-high.webp",
+      "sha256": "e21ab095e7ad98a7b94b175f46e9863cd26b9bf97d82426a75e1efccec70a70b",
+      "size": 13560
+    },
+    {
+      "path": "reform/beta-low.webp",
+      "sourcePath": "public/images/dans/reform/beta-low.webp",
+      "sha256": "1f695b0f9b4a796b06e2ef4bc966562a113d67c8730bac2cafffe892d28af323",
+      "size": 11990
+    },
+    {
+      "path": "reform/beta-mid-high.webp",
+      "sourcePath": "public/images/dans/reform/beta-mid-high.webp",
+      "sha256": "b36dd098c521f1375d768065b586a70577e19e2f215995fd66e004f3050c2244",
+      "size": 12162
+    },
+    {
+      "path": "reform/beta-mid-low.webp",
+      "sourcePath": "public/images/dans/reform/beta-mid-low.webp",
+      "sha256": "73e6c6bb9f407d9615d883da0d0dd979d7c37aa1f5e865460cec1bc68edd73a2",
+      "size": 11248
+    },
+    {
+      "path": "reform/beta.webp",
+      "sourcePath": "public/images/dans/reform/beta.webp",
+      "sha256": "a625b0e0706c3d54f834ae62baacc0c9c862eebe7c3bf19bba7ea0c9e94553c3",
+      "size": 10154
+    },
+    {
+      "path": "reform/delta-high.webp",
+      "sourcePath": "public/images/dans/reform/delta-high.webp",
+      "sha256": "166f4b9a0ed7d2bbdaec295b0d13d647f4086b32af18ef582bc9575dbfbc3ba7",
+      "size": 12830
+    },
+    {
+      "path": "reform/delta-low.webp",
+      "sourcePath": "public/images/dans/reform/delta-low.webp",
+      "sha256": "f1e96c0478f17be1db2a07d7d08ceaa205354501978611ea8fd6bcf1f4cfef1b",
+      "size": 11312
+    },
+    {
+      "path": "reform/delta-mid-high.webp",
+      "sourcePath": "public/images/dans/reform/delta-mid-high.webp",
+      "sha256": "e2b2ea370e70ca24c2d68eb134af6f15cb417c69ba226d6acc7da44923f77a06",
+      "size": 11230
+    },
+    {
+      "path": "reform/delta-mid-low.webp",
+      "sourcePath": "public/images/dans/reform/delta-mid-low.webp",
+      "sha256": "ecc5c34d649a614f74dd4581d94d14a2922f1e7e190d5aa7acebfbbcad54d082",
+      "size": 10472
+    },
+    {
+      "path": "reform/delta.webp",
+      "sourcePath": "public/images/dans/reform/delta.webp",
+      "sha256": "25ed6baed90e5bcfe4265ee359d89a8b4dfff4235a76161c59f8c57b4a1bebaf",
+      "size": 9696
+    },
+    {
+      "path": "reform/epsilon-high.webp",
+      "sourcePath": "public/images/dans/reform/epsilon-high.webp",
+      "sha256": "92231aca6605781a27076c5aa1f3632811474c8be1913390adab912dca001d09",
+      "size": 15014
+    },
+    {
+      "path": "reform/epsilon-low.webp",
+      "sourcePath": "public/images/dans/reform/epsilon-low.webp",
+      "sha256": "a162004ff758eaf50812a02b2aae29f275dd09816ef6c7ce488fd3826b80e4fc",
+      "size": 13284
+    },
+    {
+      "path": "reform/epsilon-mid-high.webp",
+      "sourcePath": "public/images/dans/reform/epsilon-mid-high.webp",
+      "sha256": "5890c2b4b5f7606874a469abaa9dc232a6befc1d664415ed8f39f3de033c6fa7",
+      "size": 13306
+    },
+    {
+      "path": "reform/epsilon-mid-low.webp",
+      "sourcePath": "public/images/dans/reform/epsilon-mid-low.webp",
+      "sha256": "e59c34809b2c0b301352f7a4a67ef08da5fb1d681eaaec9158f7578b4eaed7ad",
+      "size": 12252
+    },
+    {
+      "path": "reform/epsilon.webp",
+      "sourcePath": "public/images/dans/reform/epsilon.webp",
+      "sha256": "5930e92c8d868c6ebf3dc14e282c21107046e5eada811152c39de391db17a623",
+      "size": 10670
+    },
+    {
+      "path": "reform/eta-high.webp",
+      "sourcePath": "public/images/dans/reform/eta-high.webp",
+      "sha256": "7bdf3a6bbfe17bd74adb780aed0e514509199805d27560f3af66dfe37733baf2",
+      "size": 16858
+    },
+    {
+      "path": "reform/eta-low.webp",
+      "sourcePath": "public/images/dans/reform/eta-low.webp",
+      "sha256": "b83f1551a9b1fdaf33743dda42caab86305a719f7c840fb3c973670edb2de2c4",
+      "size": 15076
+    },
+    {
+      "path": "reform/eta-mid-high.webp",
+      "sourcePath": "public/images/dans/reform/eta-mid-high.webp",
+      "sha256": "e9be762c9885ef4913a364ffeeabf7a4dde9d1b86a9abef022bbe0aaaee55e94",
+      "size": 15310
+    },
+    {
+      "path": "reform/eta-mid-low.webp",
+      "sourcePath": "public/images/dans/reform/eta-mid-low.webp",
+      "sha256": "4ec752eed5f21d1a65ac6bcc5caba38d21238966021b318bcdac747ffb084f77",
+      "size": 14190
+    },
+    {
+      "path": "reform/eta.webp",
+      "sourcePath": "public/images/dans/reform/eta.webp",
+      "sha256": "0e45df85e083781654e94fa6eb1c545ce654c3cc8dd743576f941fc718efd8ed",
+      "size": 13014
+    },
+    {
+      "path": "reform/gamma-high.webp",
+      "sourcePath": "public/images/dans/reform/gamma-high.webp",
+      "sha256": "d51a76c65bd66cb3ebc5361d04213cabb96ea141775aec49407630799e286fc3",
+      "size": 10862
+    },
+    {
+      "path": "reform/gamma-low.webp",
+      "sourcePath": "public/images/dans/reform/gamma-low.webp",
+      "sha256": "d7aca96453e6d69a0f2c842cf1f97aa54cccb122f983f8c2fbba27ff85e859a5",
+      "size": 9238
+    },
+    {
+      "path": "reform/gamma-mid-high.webp",
+      "sourcePath": "public/images/dans/reform/gamma-mid-high.webp",
+      "sha256": "637d5b3c634bbc5b2315513a8e842ec1597fe8d829026056da8a900bb3aa586f",
+      "size": 9630
+    },
+    {
+      "path": "reform/gamma-mid-low.webp",
+      "sourcePath": "public/images/dans/reform/gamma-mid-low.webp",
+      "sha256": "20de54e277fab334b03dbc8b44621793e47d1f3b4faec531b18061fb6b2e9f00",
+      "size": 8430
+    },
+    {
+      "path": "reform/gamma.webp",
+      "sourcePath": "public/images/dans/reform/gamma.webp",
+      "sha256": "1f72eb63228bd32b9b53547c29b6fcaf92bc4970d9ee3efa1c0f65371e3ed3b5",
+      "size": 7776
+    },
+    {
+      "path": "reform/iota-high.webp",
+      "sourcePath": "public/images/dans/reform/iota-high.webp",
+      "sha256": "3253a553989d8bead43cca221285b31c64d8a9b5c5788bdedd19f0088745da36",
+      "size": 10194
+    },
+    {
+      "path": "reform/iota-low.webp",
+      "sourcePath": "public/images/dans/reform/iota-low.webp",
+      "sha256": "8aaf056d3f43422c1a9515c35880a182c0069d42e50e5402c283f943253e1073",
+      "size": 9402
+    },
+    {
+      "path": "reform/iota-mid-high.webp",
+      "sourcePath": "public/images/dans/reform/iota-mid-high.webp",
+      "sha256": "582af24cb5d7a1bae76e261ff1dab26f2bff0ddf3ffe87820eb8a7fdc7ad52f6",
+      "size": 9048
+    },
+    {
+      "path": "reform/iota-mid-low.webp",
+      "sourcePath": "public/images/dans/reform/iota-mid-low.webp",
+      "sha256": "f82e9a3e462be471dd501534717e77748cb307be1642372cd114d63c7c107038",
+      "size": 8504
+    },
+    {
+      "path": "reform/iota.webp",
+      "sourcePath": "public/images/dans/reform/iota.webp",
+      "sha256": "454f89bda57a1598832e29b1008e362110a1c169835861296ec8c1bcbc9d0e1f",
+      "size": 7514
+    },
+    {
+      "path": "reform/kappa-high.webp",
+      "sourcePath": "public/images/dans/reform/kappa-high.webp",
+      "sha256": "677d7ce0af45478d6b81297204e8413f3c2aa40704a273015d7b51e1fc385747",
+      "size": 19818
+    },
+    {
+      "path": "reform/kappa-low.webp",
+      "sourcePath": "public/images/dans/reform/kappa-low.webp",
+      "sha256": "a1485826329fb878104b62b4bd212dbf1cb26c9bdfd158dae9ecd4228808398d",
+      "size": 17498
+    },
+    {
+      "path": "reform/kappa-mid-high.webp",
+      "sourcePath": "public/images/dans/reform/kappa-mid-high.webp",
+      "sha256": "2f7df8e726ddd74993f09c50dad1914da76350d286dcde5957061ffb58984d30",
+      "size": 17578
+    },
+    {
+      "path": "reform/kappa-mid-low.webp",
+      "sourcePath": "public/images/dans/reform/kappa-mid-low.webp",
+      "sha256": "96d5726dab301ca9082b95dbcd89c25c94696e93cdbaad8a3879a6173579a24e",
+      "size": 16154
+    },
+    {
+      "path": "reform/kappa.webp",
+      "sourcePath": "public/images/dans/reform/kappa.webp",
+      "sha256": "00b3d8788c7f4b999c4ba1dbb45295966d76961a3f03438d033b6639199cdf54",
+      "size": 15504
+    },
+    {
+      "path": "reform/theta-high.webp",
+      "sourcePath": "public/images/dans/reform/theta-high.webp",
+      "sha256": "3eeae0074d05ecd8cdf16dbee4cfa6c7f1fdfe5ebec4237b3c7fc06bc4199733",
+      "size": 20656
+    },
+    {
+      "path": "reform/theta-low.webp",
+      "sourcePath": "public/images/dans/reform/theta-low.webp",
+      "sha256": "01ce72362f5735e18079ad1e959007fe418ddabb03f1275e6c61707afb07af2b",
+      "size": 18992
+    },
+    {
+      "path": "reform/theta-mid-high.webp",
+      "sourcePath": "public/images/dans/reform/theta-mid-high.webp",
+      "sha256": "bb944f880427af2e85a4de804c56467a9d0c25f7db0fc95865e0b448247f34e1",
+      "size": 19046
+    },
+    {
+      "path": "reform/theta-mid-low.webp",
+      "sourcePath": "public/images/dans/reform/theta-mid-low.webp",
+      "sha256": "27da0115c5da09e78ccba14880d9f7e5331282abc67ee8a0e56e6c3b12afadb6",
+      "size": 18126
+    },
+    {
+      "path": "reform/theta.webp",
+      "sourcePath": "public/images/dans/reform/theta.webp",
+      "sha256": "9d4c0e66c12d2426bcb303c4f5812406aacf60b2b00cbb95c2d478aca05c20e2",
+      "size": 17540
+    },
+    {
+      "path": "reform/zeta-high.webp",
+      "sourcePath": "public/images/dans/reform/zeta-high.webp",
+      "sha256": "61ce339b1063545c7ac6907a09a271ec8aafb75691bebd9ac8cad14a034cf95f",
+      "size": 16408
+    },
+    {
+      "path": "reform/zeta-low.webp",
+      "sourcePath": "public/images/dans/reform/zeta-low.webp",
+      "sha256": "e6c2365f54b737d9bad0f98fc32df7f374761e039e7a9d08abd3ebd68603f496",
+      "size": 13994
+    },
+    {
+      "path": "reform/zeta-mid-high.webp",
+      "sourcePath": "public/images/dans/reform/zeta-mid-high.webp",
+      "sha256": "f6aa1f9cd1cf28676b4ef8eaa90a4dbf68626d424829acc966b05dd185785c68",
+      "size": 14376
+    },
+    {
+      "path": "reform/zeta-mid-low.webp",
+      "sourcePath": "public/images/dans/reform/zeta-mid-low.webp",
+      "sha256": "c02e30fd93deb4888936799f661410de1214e6aa2bd1fd1d5226cea3bf9b664f",
+      "size": 13000
+    },
+    {
+      "path": "reform/zeta.webp",
+      "sourcePath": "public/images/dans/reform/zeta.webp",
+      "sha256": "8ef9da535343b5a963c24f907e5bb5c36fc9895602c9d1c71fa3a9933f9db185",
+      "size": 11812
+    }
+  ]
+}

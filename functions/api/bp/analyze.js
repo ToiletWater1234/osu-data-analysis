@@ -15,7 +15,7 @@ export async function onRequestPost({ request, env }) {
     if (!/^\d+$/.test(userId)) throw Object.assign(new Error("请选择有效的玩家。"), { status: 400 });
     const session = await getSession(request, env, { required: true });
     const extended = body.localLibrary === true;
-    const cacheKey = `bp:v6:${userId}:${mode}:${keys}:${extended ? 'extras' : 'base'}`;
+    const cacheKey = `bp:v7:${userId}:${mode}:${keys}:${extended ? 'extras' : 'base'}`;
     const cached = await readTransient(cacheKey);
     if (cached) return json({ ...cached, cached: true });
     const [user, scores, pinned, recent] = await Promise.all([

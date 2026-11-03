@@ -92,7 +92,16 @@ function clientSummary(scores, client) {
     accuracy: average(selected, (score) => score.accuracy),
     averageMiss: average(selected, (score) => score.misses),
     missesPerThousand: average(selected, (score) => score.hitCount ? score.misses / score.hitCount * 1000 : 0),
+    rainbow: average(selected, (score) => score.rainbowRatio),
   };
+}
+
+export const LAZER_RAINBOW_WEIGHT = 0.5;
+export function portraitRainbow(scores) {
+  // Keep the original displayed ratios. For the portrait, cap each play's
+  // influence at 1:1 and discount lazer without renormalising the discount away.
+  return average(scores, score => Math.min(1, score.rainbowRatio) *
+    (score.client === 'lazer' ? LAZER_RAINBOW_WEIGHT : 1), index => 0.965 ** index);
 }
 
 function accuracyType(mode, accuracy, rainbow) {
@@ -103,7 +112,7 @@ function accuracyType(mode, accuracy, rainbow) {
     label: qualifies ? "准度型" : "推难度型",
     threshold,
     note: mode === "mania"
-      ? `平均准度需达到 ${(threshold * 100).toFixed(1)}%，平均黄彩不差于 1:3。`
+      ? `平均准度需达到 ${(threshold * 100).toFixed(1)}%，画像黄彩参考值需达到 1:3；单图贡献封顶 1:1，lazer 黄彩按 50% 权重计入。原始黄彩单独展示，不用于直接提升键型等级。`
       : `该模式平均准度标准为 ${(threshold * 100).toFixed(1)}%。`,
   };
 }
@@ -141,6 +150,7 @@ export function buildAnalysis(user, rawScores, rawPinned, mode, keys) {
   const averageMiss = average(sample, (score) => score.misses, weight);
   const missesPerThousand = average(sample, (score) => score.hitCount ? score.misses / score.hitCount * 1000 : 0, weight);
   const rainbow = mode === "mania" ? average(sample, (score) => score.rainbowRatio, weight) : 0;
+  const rainbowAdjusted = mode === "mania" ? portraitRainbow(sample) : 0;
   const accuracies = sample.map((score) => score.accuracy);
   const spread = percentile(accuracies, 0.75) - percentile(accuracies, 0.25);
   const stability = Math.max(0, Math.min(1, 1 - spread * 10 - missesPerThousand / 18));
@@ -156,6 +166,7 @@ export function buildAnalysis(user, rawScores, rawPinned, mode, keys) {
     averageMiss,
     missesPerThousand,
     rainbow,
+    rainbowAdjusted,
     stability,
   };
   return {
@@ -174,7 +185,7 @@ export function buildAnalysis(user, rawScores, rawPinned, mode, keys) {
     scoreCount: scores.length,
     pinnedCount: pinned.length,
     metrics,
-    playStyle: accuracyType(mode, accuracy, rainbow),
+    playStyle: accuracyType(mode, accuracy, rainbowAdjusted),
     clients: { stable: clientSummary(sample, "stable"), lazer: clientSummary(sample, "lazer") },
     abilities: abilityItems(mode, metrics),
     scores: scores.slice(0, limit),

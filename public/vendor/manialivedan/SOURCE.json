@@ -1,0 +1,56 @@
+{
+  "repository": "https://github.com/M1ra1Fx/ManiaLiveDan",
+  "commit": "9ff65f4733dee96c1275416875fa03479aaea43e",
+  "license": "MIT",
+  "files": [
+    {
+      "path": "js/app/segment.js",
+      "sha256": "0e4c196c76bd33c9114e64726f5719325cf9667dd5a16aa982ece0bc2269083e",
+      "upstreamSha256": "53ffb98de9d4261cadb0178d822753415e252bf30b165c1ddb22727dc5b8252f"
+    },
+    {
+      "path": "js/app/vibro.js",
+      "sha256": "4fe98984f9e881c62a625d3335053965d71840378278f8293bb413c9d000b2fa"
+    },
+    {
+      "path": "js/lib/rework/sunnyAlgorithm.js",
+      "sha256": "4b1b5f62009eefce05ea45feb85d74cdb1929b3ba2c0f49c414f2577b8fb105f"
+    },
+    {
+      "path": "js/lib/rework/sunnyWindowAlgorithm.js",
+      "sha256": "4dfd5313362d5491a16a871ada79e84ff0b5269ab0a3bc09764f9c5a2a2d6f70"
+    },
+    {
+      "path": "js/lib/rework/reworkMathCore.js",
+      "sha256": "d15f6c9f60f0f24d959a3cc332a385c738024300b7b1b70e512c7f8e6ece6521"
+    },
+    {
+      "path": "js/lib/parser/osuFileParser.js",
+      "sha256": "e4ee6debe687bffc77a3d755a8526e27dd758d6ff74df8da74e6a8dd65c1cf0c"
+    },
+    {
+      "path": "js/lib/parser/noteColumn.js",
+      "sha256": "f700e90298532d23a0b2585119ff4150c442fcb17aa31e37c32d96f1fa480db2"
+    },
+    {
+      "path": "js/lib/parser/osuTimeSlice.js",
+      "sha256": "6d0f1fd6eeb47e73b7e0d8400f50954a20d63e38c695678a336b5e3acf681a65"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "70d02b64a821b2d55f45a3d64cb724c97bffa5f58d2ad60d4ce789d8abf401f7"
+    },
+    {
+      "path": "NOTICE.md",
+      "sha256": "9b0f338bf22460582949b899204cc909f7d696930d87a06d6d0b46a007f95c79"
+    }
+  ],
+  "adapters": [
+    "js/app/config.js",
+    "js/app/dan.js"
+  ],
+  "notes": "Subset only; no ONNX, Prism, Etterna, UI or badge assets. Adapters reuse the existing LeoBlack interval tables. Sunny and parsing code copyright Leo_Black; plugin code copyright MiraiFx. See NOTICE.md.",
+  "sitePatches": [
+    "js/app/segment.js imports the site segment-limits.js adapter to merge ranges to at most ten before final RC/LN estimation. Original upstream hash retained per file."
+  ]
+}

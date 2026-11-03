@@ -1,0 +1,107 @@
+[
+  {
+    "level": 1,
+    "sourceFile": "4KLNV2_LVL1.jpg",
+    "mode": "built-in image_gen",
+    "transparent_background": true,
+    "prompt": "Use case: background-extraction. Edit target: the provided original 4K LN DAN V2 level-1 course cover. Extract ONLY the complete central diamond-shaped square badge at approximately x=744..1175 y=402..832 of the 1920x1080 image. Keep the turquoise outer diamond frame, dark inner plate, all original typography 'LEVEL 1', the turquoise Japanese numeral 一, and the bottom word 'O N E' exactly as in the original. Preserve the original badge shape, orientation, colors, font proportions, subtle interior shading and content; do not redesign or invent anything. Remove all surrounding anime/song artwork, the white diagonal dividers, the song list, and all background outside the badge. Output one centered standalone badge with a genuinely transparent alpha background and only small even transparent padding. Do not place it on a new background; no checkerboard pixels baked into the image."
+  },
+  {
+    "level": 2,
+    "sourceFile": "4KLNV2_LVL2.jpg",
+    "prompt": "Use case: background-extraction. Edit target: the supplied ORIGINAL 1920x1080 4K LN DAN V2 course cover for level 2. Extract ONLY its complete central diamond-shaped square badge (near x=740..1180, y=395..835). Preserve the original colored outer diamond frame and inner plate and every component of the central logo, including any original lettering that slightly extends outside the diamond. Preserve exactly the typography \"LEVEL 2\", Japanese symbol/text \"二\", and bottom label \"TWO\". Keep the exact original artwork, color, design, orientation, layered interior shading, texture and character proportions; DO NOT redraw, redesign, enhance, recolor, replace characters, or create a new logo. Remove surrounding song/anime artwork, diagonal scene dividers, the side song list, and all material outside the central badge. Output a single centered standalone badge on a truly transparent alpha background with small equal transparent padding, retaining the whole badge without cutting its corners or text. No new background, no checkerboard pixels, no added shadow, no added text.",
+    "mode": "built-in image_gen",
+    "transparent_background": true
+  },
+  {
+    "level": 3,
+    "sourceFile": "4KLNV2_LVL3.jpg",
+    "prompt": "Use case: background-extraction. Edit target: the supplied ORIGINAL 1920x1080 4K LN DAN V2 course cover for level 3. Extract ONLY its complete central diamond-shaped square badge (near x=740..1180, y=395..835). Preserve the original colored outer diamond frame and inner plate and every component of the central logo, including any original lettering that slightly extends outside the diamond. Preserve exactly the typography \"LEVEL 3\", Japanese symbol/text \"三\", and bottom label \"THREE\". Keep the exact original artwork, color, design, orientation, layered interior shading, texture and character proportions; DO NOT redraw, redesign, enhance, recolor, replace characters, or create a new logo. Remove surrounding song/anime artwork, diagonal scene dividers, the side song list, and all material outside the central badge. Output a single centered standalone badge on a truly transparent alpha background with small equal transparent padding, retaining the whole badge without cutting its corners or text. No new background, no checkerboard pixels, no added shadow, no added text.",
+    "mode": "built-in image_gen",
+    "transparent_background": true
+  },
+  {
+    "level": 4,
+    "sourceFile": "4KLNV2_LVL4.jpg",
+    "prompt": "Use case: background-extraction. Edit target: the supplied ORIGINAL 1920x1080 4K LN DAN V2 course cover for level 4. Extract ONLY its complete central diamond-shaped square badge (near x=740..1180, y=395..835). Preserve the original colored outer diamond frame and inner plate and every component of the central logo, including any original lettering that slightly extends outside the diamond. Preserve exactly the typography \"LEVEL 4\", Japanese symbol/text \"四\", and bottom label \"FOUR\". Keep the exact original artwork, color, design, orientation, layered interior shading, texture and character proportions; DO NOT redraw, redesign, enhance, recolor, replace characters, or create a new logo. Remove surrounding song/anime artwork, diagonal scene dividers, the side song list, and all material outside the central badge. Output a single centered standalone badge on a truly transparent alpha background with small equal transparent padding, retaining the whole badge without cutting its corners or text. No new background, no checkerboard pixels, no added shadow, no added text.",
+    "mode": "built-in image_gen",
+    "transparent_background": true
+  },
+  {
+    "level": 5,
+    "sourceFile": "4KLNV2_LVL5.jpg",
+    "prompt": "Use case: background-extraction. Edit target: the supplied ORIGINAL 1920x1080 4K LN DAN V2 course cover for level 5. Extract ONLY its complete central diamond-shaped square badge (near x=740..1180, y=395..835). Preserve the original colored outer diamond frame and inner plate and every component of the central logo, including any original lettering that slightly extends outside the diamond. Preserve exactly the typography \"LEVEL 5\", Japanese symbol/text \"五\", and bottom label \"FIVE\". Keep the exact original artwork, color, design, orientation, layered interior shading, texture and character proportions; DO NOT redraw, redesign, enhance, recolor, replace characters, or create a new logo. Remove surrounding song/anime artwork, diagonal scene dividers, the side song list, and all material outside the central badge. Output a single centered standalone badge on a truly transparent alpha background with small equal transparent padding, retaining the whole badge without cutting its corners or text. No new background, no checkerboard pixels, no added shadow, no added text.",
+    "mode": "built-in image_gen",
+    "transparent_background": true
+  },
+  {
+    "level": 6,
+    "sourceFile": "4KLNV2_LVL6.jpg",
+    "prompt": "Use case: background-extraction. Edit target: the supplied ORIGINAL 1920x1080 4K LN DAN V2 course cover for level 6. Extract ONLY its complete central diamond-shaped square badge (near x=740..1180, y=395..835). Preserve the original colored outer diamond frame and inner plate and every component of the central logo, including any original lettering that slightly extends outside the diamond. Preserve exactly the typography \"LEVEL 6\", Japanese symbol/text \"六\", and bottom label \"SIX\". Keep the exact original artwork, color, design, orientation, layered interior shading, texture and character proportions; DO NOT redraw, redesign, enhance, recolor, replace characters, or create a new logo. Remove surrounding song/anime artwork, diagonal scene dividers, the side song list, and all material outside the central badge. Output a single centered standalone badge on a truly transparent alpha background with small equal transparent padding, retaining the whole badge without cutting its corners or text. No new background, no checkerboard pixels, no added shadow, no added text.",
+    "mode": "built-in image_gen",
+    "transparent_background": true
+  },
+  {
+    "level": 7,
+    "sourceFile": "4KLNV2_LVL7.jpg",
+    "prompt": "Use case: background-extraction. Edit target: the supplied ORIGINAL 1920x1080 4K LN DAN V2 course cover for level 7. Extract ONLY its complete central diamond-shaped square badge (near x=740..1180, y=395..835). Preserve the original colored outer diamond frame and inner plate and every component of the central logo, including any original lettering that slightly extends outside the diamond. Preserve exactly the typography \"LEVEL 7\", Japanese symbol/text \"七\", and bottom label \"SEVEN\". Keep the exact original artwork, color, design, orientation, layered interior shading, texture and character proportions; DO NOT redraw, redesign, enhance, recolor, replace characters, or create a new logo. Remove surrounding song/anime artwork, diagonal scene dividers, the side song list, and all material outside the central badge. Output a single centered standalone badge on a truly transparent alpha background with small equal transparent padding, retaining the whole badge without cutting its corners or text. No new background, no checkerboard pixels, no added shadow, no added text.",
+    "mode": "built-in image_gen",
+    "transparent_background": true
+  },
+  {
+    "level": 8,
+    "sourceFile": "4KLNV2_LVL8.jpg",
+    "prompt": "Use case: background-extraction. Edit target: the supplied ORIGINAL 1920x1080 4K LN DAN V2 course cover for level 8. Extract ONLY its complete central diamond-shaped square badge (near x=740..1180, y=395..835). Preserve the original colored outer diamond frame and inner plate and every component of the central logo, including any original lettering that slightly extends outside the diamond. Preserve exactly the typography \"LEVEL 8\", Japanese symbol/text \"八\", and bottom label \"EIGHT\". Keep the exact original artwork, color, design, orientation, layered interior shading, texture and character proportions; DO NOT redraw, redesign, enhance, recolor, replace characters, or create a new logo. Remove surrounding song/anime artwork, diagonal scene dividers, the side song list, and all material outside the central badge. Output a single centered standalone badge on a truly transparent alpha background with small equal transparent padding, retaining the whole badge without cutting its corners or text. No new background, no checkerboard pixels, no added shadow, no added text.",
+    "mode": "built-in image_gen",
+    "transparent_background": true
+  },
+  {
+    "level": 9,
+    "sourceFile": "4KLNV2_LVL9.jpg",
+    "prompt": "Use case: background-extraction. Edit target: the supplied ORIGINAL 1920x1080 4K LN DAN V2 course cover for level 9. Extract ONLY its complete central diamond-shaped square badge (near x=740..1180, y=395..835). Preserve the original colored outer diamond frame and inner plate and every component of the central logo, including any original lettering that slightly extends outside the diamond. Preserve exactly the typography \"LEVEL 9\", Japanese symbol/text \"九\", and bottom label \"NINE\". Keep the exact original artwork, color, design, orientation, layered interior shading, texture and character proportions; DO NOT redraw, redesign, enhance, recolor, replace characters, or create a new logo. Remove surrounding song/anime artwork, diagonal scene dividers, the side song list, and all material outside the central badge. Output a single centered standalone badge on a truly transparent alpha background with small equal transparent padding, retaining the whole badge without cutting its corners or text. No new background, no checkerboard pixels, no added shadow, no added text.",
+    "mode": "built-in image_gen",
+    "transparent_background": true
+  },
+  {
+    "level": 10,
+    "sourceFile": "4KLNV2_LVL10.jpg",
+    "prompt": "Use case: background-extraction. Edit target: the supplied ORIGINAL 1920x1080 4K LN DAN V2 course cover for level 10. Extract ONLY its complete central diamond-shaped square badge (near x=740..1180, y=395..835). Preserve the original colored outer diamond frame and inner plate and every component of the central logo, including any original lettering that slightly extends outside the diamond. Preserve exactly the typography \"LEVEL 10\", Japanese symbol/text \"十\", and bottom label \"TEN\". Keep the exact original artwork, color, design, orientation, layered interior shading, texture and character proportions; DO NOT redraw, redesign, enhance, recolor, replace characters, or create a new logo. Remove surrounding song/anime artwork, diagonal scene dividers, the side song list, and all material outside the central badge. Output a single centered standalone badge on a truly transparent alpha background with small equal transparent padding, retaining the whole badge without cutting its corners or text. No new background, no checkerboard pixels, no added shadow, no added text.",
+    "mode": "built-in image_gen",
+    "transparent_background": true
+  },
+  {
+    "level": 11,
+    "sourceFile": "4KLNV2_EXLVL11.jpg",
+    "prompt": "Use case: background-extraction. Edit target: the supplied ORIGINAL 1920x1080 4K LN DAN V2 course cover for level 11. Extract ONLY its complete central diamond-shaped square badge (near x=740..1180, y=395..835). Preserve the original colored outer diamond frame and inner plate and every component of the central logo, including any original lettering that slightly extends outside the diamond. Preserve exactly the typography \"EXTRA LEVEL 11\", Japanese symbol/text \"夜明け\", and bottom label \"YOAKE\". Keep the exact original artwork, color, design, orientation, layered interior shading, texture and character proportions; DO NOT redraw, redesign, enhance, recolor, replace characters, or create a new logo. Remove surrounding song/anime artwork, diagonal scene dividers, the side song list, and all material outside the central badge. Output a single centered standalone badge on a truly transparent alpha background with small equal transparent padding, retaining the whole badge without cutting its corners or text. No new background, no checkerboard pixels, no added shadow, no added text.",
+    "mode": "built-in image_gen",
+    "transparent_background": true
+  },
+  {
+    "level": 12,
+    "sourceFile": "4KLNV2_EXLVL12.jpg",
+    "prompt": "Use case: background-extraction. Edit target: the supplied ORIGINAL 1920x1080 4K LN DAN V2 course cover for level 12. Extract ONLY its complete central diamond-shaped square badge (near x=740..1180, y=395..835). Preserve the original colored outer diamond frame and inner plate and every component of the central logo, including any original lettering that slightly extends outside the diamond. Preserve exactly the typography \"EXTRA LEVEL 12\", Japanese symbol/text \"夕暮れ\", and bottom label \"YUUGURE\". Keep the exact original artwork, color, design, orientation, layered interior shading, texture and character proportions; DO NOT redraw, redesign, enhance, recolor, replace characters, or create a new logo. Remove surrounding song/anime artwork, diagonal scene dividers, the side song list, and all material outside the central badge. Output a single centered standalone badge on a truly transparent alpha background with small equal transparent padding, retaining the whole badge without cutting its corners or text. No new background, no checkerboard pixels, no added shadow, no added text.",
+    "mode": "built-in image_gen",
+    "transparent_background": true
+  },
+  {
+    "level": 13,
+    "sourceFile": "4KLNV2_EXLVL13.jpg",
+    "prompt": "Use case: background-extraction. Edit target: the supplied ORIGINAL 1920x1080 4K LN DAN V2 course cover for level 13. Extract ONLY its complete central diamond-shaped square badge (near x=740..1180, y=395..835). Preserve the original colored outer diamond frame and inner plate and every component of the central logo, including any original lettering that slightly extends outside the diamond. Preserve exactly the typography \"EXTRA LEVEL 13\", Japanese symbol/text \"夜\", and bottom label \"YORU\". Keep the exact original artwork, color, design, orientation, layered interior shading, texture and character proportions; DO NOT redraw, redesign, enhance, recolor, replace characters, or create a new logo. Remove surrounding song/anime artwork, diagonal scene dividers, the side song list, and all material outside the central badge. Output a single centered standalone badge on a truly transparent alpha background with small equal transparent padding, retaining the whole badge without cutting its corners or text. No new background, no checkerboard pixels, no added shadow, no added text.",
+    "mode": "built-in image_gen",
+    "transparent_background": true
+  },
+  {
+    "level": 14,
+    "sourceFile": "4KLNV2_FNLVL14.jpg",
+    "prompt": "Use case: background-extraction. Edit target: the supplied ORIGINAL 1920x1080 4K LN DAN V2 course cover for level 14. Extract ONLY its complete central diamond-shaped square badge (near x=740..1180, y=395..835). Preserve the original overlapping rotated geometric frames and inner plate and every component of the central logo, including any original lettering that slightly extends outside the diamond. Preserve exactly the typography \"FINAL LEVEL 14\", Japanese symbol/text \"闇\", and bottom label \"YAMI\". Keep the exact original artwork, color, design, orientation, layered interior shading, texture and character proportions; DO NOT redraw, redesign, enhance, recolor, replace characters, or create a new logo. Remove surrounding song/anime artwork, diagonal scene dividers, the side song list, and all material outside the central badge. Output a single centered standalone badge on a truly transparent alpha background with small equal transparent padding, retaining the whole badge without cutting its corners or text. No new background, no checkerboard pixels, no added shadow, no added text.",
+    "mode": "built-in image_gen",
+    "transparent_background": true
+  },
+  {
+    "level": 15,
+    "sourceFile": "4KLNV2_FNLVL15.jpg",
+    "prompt": "Use case: background-extraction. Edit target: the supplied ORIGINAL 1920x1080 4K LN DAN V2 course cover for level 15. Extract ONLY its complete central diamond-shaped square badge (near x=740..1180, y=395..835). Preserve the original overlapping rotated geometric frames and inner plate and every component of the central logo, including any original lettering that slightly extends outside the diamond. Preserve exactly the typography \"FINAL LEVEL 15\", Japanese symbol/text \"夢\", and bottom label \"YUME\". Keep the exact original artwork, color, design, orientation, layered interior shading, texture and character proportions; DO NOT redraw, redesign, enhance, recolor, replace characters, or create a new logo. Remove surrounding song/anime artwork, diagonal scene dividers, the side song list, and all material outside the central badge. Output a single centered standalone badge on a truly transparent alpha background with small equal transparent padding, retaining the whole badge without cutting its corners or text. No new background, no checkerboard pixels, no added shadow, no added text.",
+    "mode": "built-in image_gen",
+    "transparent_background": true
+  }
+]

@@ -1,0 +1,145 @@
+{
+  "source": "4K LN DAN V2 course covers supplied by the site owner",
+  "method": "Central badge extracted using built-in image_gen with transparent_background=true. Original covers are retained unchanged outside this repository.",
+  "rights": "Original artwork rights remain with its authors. User-provided artwork is not relicensed as site-original MIT art.",
+  "availableLevels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "gradeVariants": "One original level image shared by low/mid/high variants; actual tier remains visible as text.",
+  "files": [
+    {
+      "level": 1,
+      "path": "1.png",
+      "sourceFile": "4KLNV2_LVL1.jpg",
+      "sourceSha256": "f85350cb68d08d7c8acbfe45d26746ae109033b0930544531f98f9337ca78851",
+      "sha256": "e4c75fdd462f65c065041b069f3b2594957aeff724a8a834d8f73c1fdc9633a5",
+      "bytes": 627848
+    },
+    {
+      "level": 2,
+      "path": "2.png",
+      "sourceFile": "4KLNV2_LVL2.jpg",
+      "sourceSha256": "f00afcd232130ebe8e9cc5b8ce5148c0af0f3175ff9e75d8a8b5b5dd370c40a7",
+      "sha256": "b44c55784ff3afc83b636d27fb0d8d5eca3ae589a213d721383c59f5ef572bb3",
+      "bytes": 794591
+    },
+    {
+      "level": 3,
+      "path": "3.png",
+      "sourceFile": "4KLNV2_LVL3.jpg",
+      "sourceSha256": "638b3448d475ec159b780cd5deb8fd1bcc1b03d78a40e76095fc04a3256113f0",
+      "sha256": "5c35e985f041f222679594b42e2c5f6facbfa73e9d20454124bc04025a1ced89",
+      "bytes": 676415
+    },
+    {
+      "level": 4,
+      "path": "4.png",
+      "sourceFile": "4KLNV2_LVL4.jpg",
+      "sourceSha256": "680e73c4d28d994376f0b3058e6597e80353ae2147f2ef0279b4e8359f9d2abf",
+      "sha256": "9859592d81c6c486002ff3f361937c3e5275b82a5f631a1c670c6f46545300e3",
+      "bytes": 712363
+    },
+    {
+      "level": 5,
+      "path": "5.png",
+      "sourceFile": "4KLNV2_LVL5.jpg",
+      "sourceSha256": "3956f95fbf5df466cf42b71973010bdb052c4092cdfd7cd8d3c8b4c4f08c43f2",
+      "sha256": "1f9985edb38f3cd57bc685d54c54f70f155e90b674652970ce1c00c8f3a29bbb",
+      "bytes": 628906
+    },
+    {
+      "level": 6,
+      "path": "6.png",
+      "sourceFile": "4KLNV2_LVL6.jpg",
+      "sourceSha256": "24e757d1d44f1cc3f67158df38c44207b4f4b21870047e297eec9f147d2020a9",
+      "sha256": "71eeb69dae05a26edbd638b8c6da2f3bcb99423fff46525502a81317d4d1c2c8",
+      "bytes": 763354
+    },
+    {
+      "level": 7,
+      "path": "7.png",
+      "sourceFile": "4KLNV2_LVL7.jpg",
+      "sourceSha256": "6125e403dc5fea80792ad7d19606f9f26eaaa91c31e141087da3ca20df83427d",
+      "sha256": "5fee6824a326b03942082d9e86f67509c6541eebeb890b0d7e4d527b05e34466",
+      "bytes": 776970
+    },
+    {
+      "level": 8,
+      "path": "8.png",
+      "sourceFile": "4KLNV2_LVL8.jpg",
+      "sourceSha256": "a04c3f62d6dc60e06b1e9bf789407928ccb73f1b5b409266031ad65c7324860f",
+      "sha256": "55a00a9ebb433d9c769c0b6b283506e2648211e021a2b370fa8c786e69bbe3b0",
+      "bytes": 808706
+    },
+    {
+      "level": 9,
+      "path": "9.png",
+      "sourceFile": "4KLNV2_LVL9.jpg",
+      "sourceSha256": "bd948e7b3debe55681798c9f5d31b16e65f143c7aaf34863a741bcfbfba7a0a8",
+      "sha256": "9dd2957bf6e7beccd90e367f18aa4329a3314539c426b8f3a89c3e7aa20abaf5",
+      "bytes": 847869
+    },
+    {
+      "level": 10,
+      "path": "10.png",
+      "sourceFile": "4KLNV2_LVL10.jpg",
+      "sourceSha256": "7a97dd53b1afe59d745fccbd9ce53508c697c36eb48b0bd80bb9f96b98110c60",
+      "sha256": "1e6304fed70dcbed4f24ac771e5f8d6e0594bc94bdd720aacd7b8ddc9c819de3",
+      "bytes": 618012
+    },
+    {
+      "level": 11,
+      "path": "11.png",
+      "sourceFile": "4KLNV2_EXLVL11.jpg",
+      "sourceSha256": "42a360add28a1f2e25b01bcc63478bcf419e7efe5f60bef46f42fb03963f724b",
+      "sha256": "00c0bd0251001ce3904e91ecf7171f66a29ae67bd9a8a8b277fde0d579f41f6a",
+      "bytes": 1017357
+    },
+    {
+      "level": 12,
+      "path": "12.png",
+      "sourceFile": "4KLNV2_EXLVL12.jpg",
+      "sourceSha256": "872aaa3308907edeceaba0cea43e38b94440b2e1f14e92a4406d92ff35ad5bb2",
+      "sha256": "923b6048cb6d09e7b6a7a87c1e7716763a1e4f8f68026fe90a9fdfa1ed8936a8",
+      "bytes": 934439
+    },
+    {
+      "level": 13,
+      "path": "13.png",
+      "sourceFile": "4KLNV2_EXLVL13.jpg",
+      "sourceSha256": "508c8d97cf4d05e2930d9c37441b4279674289ea04184573ffacea101afb69bb",
+      "sha256": "fc5ff52b5a4f9348dabdabfb4b07243e777e3e7c0cde3d452c0c5365660f0931",
+      "bytes": 1015448
+    },
+    {
+      "level": 14,
+      "path": "14.png",
+      "sourceFile": "4KLNV2_FNLVL14.jpg",
+      "sourceSha256": "7a9235807c1a5757711cab3b54d173c001bbe243cea78c27203a6382857f72ff",
+      "sha256": "df00464047fea9054272d397f735907c9437cee3fc3bfbbf470c7a8386d46bc5",
+      "bytes": 1441460
+    },
+    {
+      "level": 15,
+      "path": "15.png",
+      "sourceFile": "4KLNV2_FNLVL15.jpg",
+      "sourceSha256": "d733f597f62d338d491ddb256c50274e0f356dac6a018fc70db632ac33a98baf",
+      "sha256": "cb92492bcd122d34e5342361dd7a0e842cda947c9491820fddfa10054c525c25",
+      "bytes": 854751
+    }
+  ]
+}
