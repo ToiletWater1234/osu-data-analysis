@@ -3,8 +3,10 @@ const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char =>
   ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[char]);
 
 export function weightedSkillAbility(skill) {
+  const detail=skill.kind==='LN'&&Number.isFinite(skill.domainEvidenceShare)
+    ?` 面条内占比 ${(skill.domainEvidenceShare*100).toFixed(2)}%，局部难度保留同段常规负担。`:'';
   return {name:skill.nameZh,value:`${skill.tier}（估计）`,
-    note:`${skill.confidence} · ${skill.sampleCount} 张成绩 · 参考覆盖率 ${(skill.evidenceShare*100).toFixed(2)}% · 整图 Acc ${(skill.accuracy*100).toFixed(2)}%。依据整图标尺、局部相对难度与键型占比评分。`};
+    note:`${skill.confidence} · ${skill.sampleCount} 张成绩 · 参考覆盖率 ${(skill.evidenceShare*100).toFixed(2)}% · 整图 Acc ${(skill.accuracy*100).toFixed(2)}%。依据整图标尺、局部相对难度与键型占比评分。${detail}`};
 }
 
 export function mainTierAbilities(skills, keyCounts) {

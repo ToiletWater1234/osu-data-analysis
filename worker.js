@@ -7,6 +7,7 @@ import * as bp from './functions/api/bp/analyze.js';
 import * as maps from './functions/api/beatmaps/search.js';
 import * as mapAnalysis from './functions/api/beatmaps/analyze.js';
 import * as mapFacts from './functions/api/beatmaps/facts.js';
+import * as mapTableRow from './functions/api/beatmaps/table-row.js';
 import * as content from './functions/api/content.js';
 import * as admin from './functions/api/admin.js';
 import * as adminUsers from './functions/api/admin-users.js';
@@ -20,6 +21,7 @@ const routes = {
   'GET /api/users/search': users.onRequestGet, 'POST /api/bp/analyze': bp.onRequestPost,
   'GET /api/beatmaps/search': maps.onRequestGet, 'POST /api/beatmaps/analyze': mapAnalysis.onRequestPost,
   'POST /api/beatmaps/facts': mapFacts.onRequestPost,
+  'GET /api/beatmaps/table-row': mapTableRow.onRequestGet,
 };
 export default {
   async fetch(request, env, ctx) {

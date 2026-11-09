@@ -10,7 +10,7 @@ import { runMixedEstimatorFromText } from './vendor/mania/js/estimator/mixedEsti
 import { limitSegments } from './segment-limits.js';
 
 const LN_CORES = new Set(['Coordination', 'Density', 'Wildcard']);
-export const SEGMENT_VERSION = 'segments-v2';
+export const SEGMENT_VERSION = 'segments-v3';
 
 // Interval unions prevent repeated/overlapping Pattern matches from multiplying
 // the number of judgement units attributed to a skill.
@@ -89,8 +89,8 @@ export function analyzeSegmentedManiaText(text, rate = 1, cvtFlag = null) {
     lnFactor:Number.isFinite(ln?.totalNotes)&&ln.totalNotes>0 ? ln.totalNotes/(ln.totalNotes+60) : rc.totalNotes/(rc.totalNotes+60),
     lnMinStar:0 };
   const groups = patternRanges(text);
-  // Keep a bounded amount of work: skip the chart explicitly instead of silently
-  // substituting the old algorithm or averaging away dozens of short bursts.
+  // Keep a bounded amount of work by merging adjacent ranges before their final
+  // estimates. No change to the v2 headline inputs or segmentation boundaries.
   let ranges = computeSegments(state) || [];
   ranges = limitSegments(splitPatternTransitions(ranges, groups, rawNotes, start, end));
   const units = [];

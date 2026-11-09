@@ -30,14 +30,18 @@ export async function onRequestGet({ request, env, ctx }) {
     const query = String(new URL(request.url).searchParams.get("q") || "").trim();
     if (!query) throw Object.assign(new Error("请输入歌名、谱面 ID 或 osu! 链接。"), { status: 400 });
     const session = await getSession(request, env, { required: true });
-    const id = query.match(/(?:beatmaps\/|#\w+\/)(\d+)/i)?.[1] || (/^\d+$/.test(query) ? query : "");
+    const id = query.match(/(?:beatmaps\/|\/b\/|#\w+\/)(\d+)/i)?.[1] || (/^\d+$/.test(query) ? query : "");
     if (id) {
       const beatmap = await osuFetch(env, session, `/beatmaps/${id}`);
       const set = await osuFetch(env, session, `/beatmapsets/${beatmap.beatmapset_id}`);
       await rememberMapFacts(env,[beatmap]);
       if (ctx?.waitUntil && ['ranked','approved','qualified','loved'].includes(beatmap.status)) ctx.waitUntil(getOsuSource(env, id,{status:beatmap.status}).catch(() => {}));
-      return json({ results: [mapSet(set)] });
+      const result = mapSet(set);
+      result.beatmaps = result.beatmaps.filter(map => String(map.id) === String(id));
+      return json({ results: [result] });
     }
+    const setId = query.match(/beatmapsets\/(\d+)/i)?.[1];
+    if (setId) return json({results:[mapSet(await osuFetch(env,session,`/beatmapsets/${setId}`))]});
     const data = await osuFetch(env, session, `/beatmapsets/search?s=any&q=${encodeURIComponent(query)}`);
     return json({ results: (data.beatmapsets || []).slice(0, 10).map(mapSet) });
   } catch (error) {

@@ -116,8 +116,9 @@ test('real Worker dispatcher runs the selected engine and preserves the legacy r
     worker.on('message',data=>{if(data.ready)worker.postMessage({source:chart(),rate:1,algorithm});
       else {clearTimeout(timer);worker.terminate();data.error?reject(Error(data.error)):resolve(data.result);}});
   });
-  const [legacy,trial]=await Promise.all([run('legacy'),run('segments-v2')]);
+  const [legacy,trial,compat]=await Promise.all([run('legacy'),run('segments-v3'),run('segments-v2')]);
   assert.ok(legacy.patternAnalysis.clusters.length);assert.equal(legacy.segments,undefined);
-  assert.ok(trial.segments.length);assert.equal(trial.algorithmVersion,'segments-v2');
+  assert.ok(trial.segments.length);assert.equal(trial.algorithmVersion,'segments-v3');
+  assert.deepEqual(compat,trial);
   assert.ok(trial.wholeMapLabels.RC);
 });

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {buildWeightedManiaProfile,stepForLabel,contributionAdjustments} from '../public/mania-weighted-profile.js';
+import {buildWeightedManiaProfile,stepForLabel,contributionAdjustments,skillAdjustments} from '../public/mania-weighted-profile.js';
 import {maniaName} from '../public/mania-labels.js';
 import {tableFor} from '../public/vendor/manialivedan/js/app/dan.js';
 import {buildAnalysis,portraitRainbow} from '../functions/_shared/profile.js';
@@ -33,11 +33,58 @@ test('20% LN and 93.5% still contributes an estimate but does not receive LN12 f
   assert.ok(ln.ratingStep<stepForLabel('LN 10 mid',4,'LN'));
 });
 test('lower coverage and lower accuracy monotonically reduce the contribution, overlapping features remain independent',()=>{
-  const at=(share,accuracy)=>buildWeightedManiaProfile([mixedPlay({share,accuracy})]).skills.find(s=>s.name==='Density');
+  const at=(share,accuracy)=>{
+    const play=mixedPlay({accuracy});play.segments[0].patterns.find(p=>p.name==='Density').stableUnits=ids(Math.round(share*1000),400);
+    return buildWeightedManiaProfile([play]).skills.find(s=>s.name==='Density');
+  };
   assert.ok(at(.2,.96).ratingStep<at(.6,.96).ratingStep);
   assert.ok(at(.6,.935).ratingStep<at(.6,.96).ratingStep);
   assert.ok(at(.2,.96).evidence[0].weight<at(.6,.96).evidence[0].weight);
   assert.equal(contributionAdjustments(.96,.6,4,'RC').coveragePenalty,0);
+});
+
+test('rare RC features lose at most one level to frequency and remain lower-weight evidence',()=>{
+  const play=mixedPlay({rc:'Gamma mid'});
+  const rare=play.segments[0].patterns.find(p=>p.name==='Jacks');rare.stableUnits=ids(100);
+  const skill=buildWeightedManiaProfile([play]).skills.find(s=>s.name==='Jacks');
+  assert.ok(skill.ratingStep>=stepForLabel('Beta mid',4,'RC'));
+  assert.ok(skill.ratingStep<stepForLabel('Gamma mid',4,'RC'));
+  assert.ok(skill.evidence[0].weight<.2);
+  assert.equal(skillAdjustments(.96,.001,4,'RC').coveragePenalty,1);
+  assert.ok(skillAdjustments(.94,.5,4,'RC').accuracyPenalty<contributionAdjustments(.94,.5,4,'RC').accuracyPenalty);
+});
+
+test('LN frequency is measured within LN and its accuracy bar is preserved',()=>{
+  const dominant=buildWeightedManiaProfile([mixedPlay({share:.2,accuracy:.97})]).skills.find(s=>s.name==='Density');
+  assert.equal(dominant.domainEvidenceShare,1);
+  assert.equal(dominant.evidenceShare,.2);
+  assert.equal(dominant.evidence[0].coveragePenalty,0);
+  assert.equal(skillAdjustments(.96,1,4,'LN').accuracyPenalty,contributionAdjustments(.96,1,4,'LN').accuracyPenalty);
+});
+
+test('LN-head structures can support RC singles even on an all-LN chart',()=>{
+  const play=mixedPlay({share:1,accuracy:.97,rc:'Gamma mid'});
+  const skill=buildWeightedManiaProfile([play]).skills.find(s=>s.name==='Stream');
+  assert.ok(skill);assert.equal(skill.tier,'Gamma mid');
+  // No change to the archived v2 headline policy on pure LN charts.
+  assert.ok(!buildWeightedManiaProfile([play]).skills.some(s=>s.name==='RC'));
+});
+
+test('concurrent RC load supports LN subtype difficulty without adding two dan scales',()=>{
+  const make=rc=>{
+    const play=mixedPlay({accuracy:.97});play.segments[0].ln=center('LN','LN 9 mid');
+    play.segments[0].rc=center('RC',rc);
+    return buildWeightedManiaProfile([play]).skills.find(s=>s.name==='Density');
+  };
+  const easy=make('Reform 8 mid'),hard=make('Gamma mid');
+  assert.ok(hard.ratingStep>easy.ratingStep);
+  assert.ok(hard.evidence[0].contextAdjustment>0);
+  assert.ok(hard.ratingStep<=stepForLabel('LN 11 mid',4,'LN'));
+  const unrelated=mixedPlay({accuracy:.97});unrelated.segments[0].ln=center('LN','LN 9 mid');
+  unrelated.segments.push({...structuredClone(unrelated.segments[0]),rc:center('RC','Gamma mid'),patterns:[],lnStableUnits:[],lnLazerUnits:[]});
+  const untouched=buildWeightedManiaProfile([unrelated]).skills.find(s=>s.name==='Density');
+  assert.equal(untouched.evidence[0].contextAdjustment,make('Alpha mid').evidence[0].contextAdjustment);
+  assert.equal(untouched.ratingStep,make('Alpha mid').ratingStep);
 });
 test('unreconciled client judgement formula reduces reliability rather than suppressing all ability cards',()=>{
   const score={...mixedPlay(),client:'lazer',totalLazerUnits:1600};

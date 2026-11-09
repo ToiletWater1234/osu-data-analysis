@@ -6,6 +6,7 @@ import { analyzeChart } from './chart-client.js';
 import {localReady,isLocalBound,searchLocal,readLocalEntry,findLocalSource} from './local-library.js';
 import {collectAnalysisSamples} from './analysis-samples.js';
 import './local-library-ui.js';
+import { renderPpMapTools, setupPpTableTools } from './pp-table-ui.js';
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
@@ -13,12 +14,12 @@ const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selec
 const state = { authenticated: false, user: null };
 const notice = $("#notice");
 const homepage = $('#carousel-stage') ? import('./homepage.js') : Promise.resolve(null);
-let selectedAlgorithm = 'segments-v2';
+let selectedAlgorithm = 'segments-v3';
 try { if (localStorage.getItem('mania-analysis-algorithm') === 'legacy') selectedAlgorithm = 'legacy'; } catch {}
 $$('[data-mania-algorithm]').forEach(select => {
   select.value = selectedAlgorithm;
   select.addEventListener('change', () => {
-    selectedAlgorithm = select.value === 'legacy' ? 'legacy' : 'segments-v2';
+    selectedAlgorithm = select.value === 'legacy' ? 'legacy' : 'segments-v3';
     try { localStorage.setItem('mania-analysis-algorithm', selectedAlgorithm); } catch {}
     showNotice('算法已切换，重新开始分析后生效。');
   });
@@ -139,7 +140,7 @@ async function withProgress(container, task, algorithm = selectedAlgorithm) {
       const progress = 30 + Math.round(done / Math.max(1, total) * 65);
       fill.style.width = `${progress}%`;
       percent.textContent = `${progress}%`;
-      status.textContent = message || `${algorithm === 'segments-v2' ? '局部分段' : 'LeoBlack 谱面'}分析 ${done} / ${total}…`;
+      status.textContent = message || `${algorithm === 'segments-v3' ? '局部分段' : 'LeoBlack 谱面'}分析 ${done} / ${total}…`;
     }, algorithm);
     fill.style.width = "100%";
     percent.textContent = "100%";
@@ -165,7 +166,7 @@ async function enrichMania(data, progress = () => {}, algorithm = selectedAlgori
     const cvtFlag = ['HO', 'IN'].filter(m => score.mods.includes(m)).join('') || null;
     try {
       if (score.mods.some(m => ['RD', 'HO', 'IN', '4K', '5K', '6K', '7K', '8K', '9K'].includes(m))) throw new Error('随机、长条转换或改键 Mod 尚不支持结构分析。');
-      if (algorithm === 'segments-v2' && score.mods.some(m => ['EZ','HR','DA'].includes(m))) throw new Error('分段试用暂不支持改变 OD 的 Mod。');
+      if (algorithm === 'segments-v3' && score.mods.some(m => ['EZ','HR','DA'].includes(m))) throw new Error('分段试用暂不支持改变 OD 的 Mod。');
       const local = score.localEntry ? {source:await readLocalEntry(score.localEntry),cached:true,local:true} : await findLocalSource(score.beatmap.id,score.beatmap.checksum);
       const downloaded = local || await api('/api/beatmaps/analyze', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id: score.beatmap.id,contextKey:data.analysisContext }) });
       const chart = { ...await analyzeChart(downloaded.source, rate, cvtFlag, algorithm), cached: downloaded.cached };
@@ -176,7 +177,7 @@ async function enrichMania(data, progress = () => {}, algorithm = selectedAlgori
     } catch (error) { failures.push({ id: score.beatmap.id, message: error.message }); }
     progress(++completed, scores.length);
   }
-  if (algorithm === 'segments-v2') {
+  if (algorithm === 'segments-v3') {
     const profile = buildWeightedManiaProfile(analyses);
     data.segmentedProfile = profile;
     const common = data.abilities.filter(item => ['准度', '稳定性', '速度', '耐力'].includes(item.name));
@@ -184,7 +185,7 @@ async function enrichMania(data, progress = () => {}, algorithm = selectedAlgori
     data.mainTiers=mainTierAbilities(profile.skills,keyCounts);
     data.abilities = [...common,...profile.skills.filter(skill=>!['RC','LN'].includes(skill.name)).map(weightedSkillAbility)];
     if (!profile.skills.length) data.abilities.push({name:'局部键型',value:'没有可用样本',note:failures[0]?.message||'没有找到可评级的局部键型。'});
-    data.patternNote = `占比评分试用 v2 · B50${data.localExtrasEnabled?' + Loved / 坟图成绩 PP 前 50（实际选入 '+sample.localCount+' 张）':''}：成功 ${analyses.length} / ${scores.length} 张，共 ${profile.segmentCount} 段。${failures.length?'跳过 '+failures.length+' 张，首个原因：'+failures[0].message+'。':''} ${profile.unverifiedCount} 张判定口径未完全吻合，降低参考权重；${profile.invalidCount} 张无有效完整成绩；${profile.vibroCount} 段疑似 Vibro 不参与评级。键型覆盖允许重叠，不要求合计 100%。没有回放，结果是能力估计，不是真实局部 Acc 或能力下限。${sample.notes.join(' ')}`;
+    data.patternNote = `单项校准试用 v3 · B50${data.localExtrasEnabled?' + Loved / 坟图成绩 PP 前 50（实际选入 '+sample.localCount+' 张）':''}：成功 ${analyses.length} / ${scores.length} 张，共 ${profile.segmentCount} 段。${failures.length?'跳过 '+failures.length+' 张，首个原因：'+failures[0].message+'。':''} ${profile.unverifiedCount} 张判定口径未完全吻合，降低参考权重；${profile.invalidCount} 张无有效完整成绩；${profile.vibroCount} 段疑似 Vibro 不参与评级。键型覆盖允许重叠，不要求合计 100%。没有回放，结果是能力估计，不是真实局部 Acc 或能力下限。${sample.notes.join(' ')}`;
     return data;
   }
   const profile = buildManiaProfile(analyses);
@@ -304,10 +305,11 @@ $("#beatmap-form")?.addEventListener("submit", async (event) => {
     }
     if (!requireLogin()) { output.textContent='官网查询需要 osu! 登录；本地查询无需登录。';return; }
     const data = await api(`/api/beatmaps/search?q=${encodeURIComponent(query)}`);
-    output.innerHTML = data.results.length ? data.results.map((set) => `<article class="beatmap-card"><img src="${escapeHtml(set.cover)}" alt="" /><div><h3>${escapeHtml(set.artist)} - ${escapeHtml(set.title)}</h3><p>mapped by ${escapeHtml(set.creator)}</p><div class="difficulty-list">${set.beatmaps.slice(0, 16).map((beatmap) => `<a href="${escapeHtml(beatmap.url)}" target="_blank" rel="noreferrer">${escapeHtml(beatmap.version)} · ${beatmap.stars.toFixed(2)}★${beatmap.keys ? ` · ${beatmap.keys}K` : ""}</a>`).join("")}</div></div><a class="external-link" href="${escapeHtml(set.url)}" target="_blank" rel="noreferrer">打开官网 ↗</a></article>`).join("") : `<div class="empty">没有找到谱面。</div>`;
+    output.innerHTML = data.results.length ? data.results.map((set) => `<article class="beatmap-card"><img src="${escapeHtml(set.cover)}" alt="" /><div><h3>${escapeHtml(set.artist)} - ${escapeHtml(set.title)}</h3><p>mapped by ${escapeHtml(set.creator)}</p><div class="difficulty-list pp-difficulty-list">${set.beatmaps.slice(0, 16).map(renderPpMapTools).join('')}</div></div><a class="external-link" href="${escapeHtml(set.url)}" target="_blank" rel="noreferrer">打开官网 ↗</a></article>`).join("") : `<div class="empty">没有找到谱面。</div>`;
   } catch (error) {
     output.innerHTML = `<div class="notice error">${escapeHtml(error.message)}</div>`;
   }
 });
 
+setupPpTableTools({root:$('#beatmap-results'), api, requireLogin, showNotice});
 loadSession();
